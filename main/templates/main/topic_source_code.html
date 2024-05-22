@@ -1,3 +1,6 @@
+
+
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt">
@@ -32,6 +35,7 @@
         .card-body {
             flex: 1; /* Ocupa o espaço restante no cartão */
         }
+
     </style>
 </head>
 <body>
@@ -45,60 +49,32 @@
     </nav>
     <br>
     <div class="container py-3">
-        <div class="card py-2 px-2 border-light">
-            <h6>{{topic_name}} | {{title_name}}</h6>
+        <div class="card py-2 px-2 border-light ">
+        <h6>Categorias | Selecione uma das categorias de problemas para resolver </h6>
         </div>
-        <div class="row">
-            <br><br>
-            <div class="col-md-6">
-                <br><br>
-                <div class="card py-2 px-2 border-light">
-                    <h5>Enunciado</h5>
-                    {{one_question.stem | safe}}
-                    <br><br><br>
-                    <button class="btn btn-secondary">Outro Problema</button>
-                </div>
-            </div>
-
-           <div class="col-md-6">
-    <br><br>
-    <div class="card py-2 px-2 border-light">
-        <h6>Problem: {{ one_question.topic_id }} | Question: {{ one_question.problem_id }}</h6>
-        <h6>Python 3</h6>
-        <form method="post" action="{% url 'source_code' topic_name title_name %}">
-            {% csrf_token %}
-            <textarea class="form-control" name="source_code" rows="10" placeholder="Escreva seu código aqui..."></textarea>
-            <input type="hidden" name="topic_id" value="{{ one_question.topic_id }}">
-            <input type="hidden" name="problem_id" value="{{ one_question.problem_id }}">
-            <button type="submit" class="btn btn-primary mt-2">Submeter</button>
-        </form>
     </div>
-</div>
+    <h1>{{result}}</h1>
+     <div class="container py-3">
+        <div class="card py-2 px-2 border-light ">
+        <h6> Problem :  102 - conditional-table-comparsion </h6>
+        <h6> Answer : Wron Answer (25%) </h6>
+        <h6> Runtime : 0.000s </h6>
         </div>
 
-        <br><br>
-        {% for key, question in all_questions.items%}
-                <h6> Problem | {{key}}</h6>
-                <p> Title : {{question.title}} </p>
-                <p> Stem : {{question.stem | safe}} </p>
-
-
-        {% endfor %}
-        <div class="card py-2 px-2 border-light">
-            <h6>TODAS AS QUESTÕES</h6>
-            {{all_questions | safe}}
+         <div class="card py-2 px-2 border-light ">
+        <h6> Diference : out wrong | out correct</h6>
+        <h6> Diference : in wrong | in correct</h6>
         </div>
-
-
-</head>
-<body>
-
-
-
-
-
     </div>
-    <br><br><br>
+
+    <br>
+
+
+
+
+<br><br><br>
+
+
     <footer class="footer mt-auto py-4 bg-dark-custom">
         <div class="container">
             <span class="text-light">Arena Code. All rights reserved - 2024.</span>
@@ -106,3 +82,4 @@
     </footer>
 </body>
 </html>
+

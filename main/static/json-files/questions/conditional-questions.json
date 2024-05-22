@@ -1,7 +1,5 @@
 [
     {
-        "topic_name": "conditional-table-comparison",
-        "topic_id": "1101",
         "problems": [
             {
                 "problem_id": "1201",
@@ -15,15 +13,16 @@
                     "input": 0,
                     "output": 0
                 },
-                "input" : [
+                "input": [
                     "1",
                     "2"
                 ],
-                "output_expected" : [
+                "output_expected": [
                     "1",
                     "2"
                 ],
-                "timelimit": "1"
+                "timelimit": "10",
+                "memory_limit": "20"
             },
             {
                 "problem_id": "1202",
@@ -78,6 +77,27 @@
                 }
             },
             {
+                "problem_id": "102024",
+                "title": "Hello Word Test",
+                "variable": {
+                    "introduction": 6,
+                    "context": 5,
+                    "problem": 6,
+                    "table_comparison": 5,
+                    "solicitation": 9,
+                    "input": 5,
+                    "output": 6
+                },
+                "input_expected": [
+                    ""
+                ],
+                "output_expected": [
+                    "Hello Word!!!"
+                ],
+                "time_limit": "1000",
+                "memory_limit": "20"
+            },
+            {
                 "problem_id": "00106",
                 "title": "title1",
                 "variable": {
@@ -90,6 +110,8 @@
                     "output": 0
                 }
             }
-        ]
+        ],
+        "topic_id": "1101",
+        "topic_name": "conditional-table-comparison"
     }
 ]
