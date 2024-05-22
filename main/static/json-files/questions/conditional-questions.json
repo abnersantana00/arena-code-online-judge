@@ -1,0 +1,95 @@
+[
+    {
+        "topic_name": "conditional-table-comparison",
+        "topic_id": "1101",
+        "problems": [
+            {
+                "problem_id": "1201",
+                "title": "title1",
+                "variable": {
+                    "introduction": 0,
+                    "context": 0,
+                    "problem": 0,
+                    "table_comparison": 0,
+                    "solicitation": 0,
+                    "input": 0,
+                    "output": 0
+                },
+                "input" : [
+                    "1",
+                    "2"
+                ],
+                "output_expected" : [
+                    "1",
+                    "2"
+                ],
+                "timelimit": "1"
+            },
+            {
+                "problem_id": "1202",
+                "title": "title1",
+                "variable": {
+                    "introduction": 0,
+                    "context": 1,
+                    "problem": 1,
+                    "table_comparison": 1,
+                    "solicitation": 4,
+                    "input": 0,
+                    "output": 0
+                }
+            },
+            {
+                "problem_id": "1203",
+                "title": "title1",
+                "variable": {
+                    "introduction": 2,
+                    "context": 2,
+                    "problem": 2,
+                    "table_comparison": 2,
+                    "solicitation": 5,
+                    "input": 0,
+                    "output": 0
+                }
+            },
+            {
+                "problem_id": "00104",
+                "title": "title1",
+                "variable": {
+                    "introduction": 1,
+                    "context": 3,
+                    "problem": 3,
+                    "table_comparison": 3,
+                    "solicitation": 6,
+                    "input": 0,
+                    "output": 0
+                }
+            },
+            {
+                "problem_id": "00105",
+                "title": "title1",
+                "variable": {
+                    "introduction": 2,
+                    "context": 4,
+                    "problem": 4,
+                    "table_comparison": 4,
+                    "solicitation": 7,
+                    "input": 0,
+                    "output": 0
+                }
+            },
+            {
+                "problem_id": "00106",
+                "title": "title1",
+                "variable": {
+                    "introduction": 3,
+                    "context": 1,
+                    "problem": 5,
+                    "table_comparison": 1,
+                    "solicitation": 8,
+                    "input": 0,
+                    "output": 0
+                }
+            }
+        ]
+    }
+]
