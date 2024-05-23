@@ -1,5 +1,4 @@
 import  json, random, subprocess, difflib, sys
-
 def generate_all_questions(json_template, json_questions):
     questions = {}
 
@@ -42,7 +41,6 @@ def generate_all_questions(json_template, json_questions):
             }
 
     return questions
-
 # Template of Questions
 def generate_one_question(json_template, json_questions, problem_id=None):
     # Gere todas as questões usando a função generate_all_questions
@@ -57,17 +55,13 @@ def generate_one_question(json_template, json_questions, problem_id=None):
     random_question = all_questions[random_problem_id]
 
     return random_question
-def generate_especific_question(json_template,json_questions, problem_id):
-    ...
 def extract_titles(json_file_path):
     with open(json_file_path, 'r') as file:
         data = json.load(file)
 
     titles_info = [(item['topic_name'], item['topic_id']) for item in data]
     return titles_info
-
-# Online Judge
-
+# Oline Judge Automatized Tests
 def run_test(source_code, json_questions, problem_id):
     if not source_code.strip():
         return "Erro por não digitar o código em branco"
