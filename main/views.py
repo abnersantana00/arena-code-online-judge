@@ -71,7 +71,7 @@ def source_code(request, topic, title_name):
 
         result = run_test(source_code, json_questions,problem_id)
         print("RESULTADO DO JUIZ :", result)
-
+        print("SOURCE CODE >>>> ",source_code)
         # Aqui você pode processar o código-fonte enviado e o objeto one_question
         # Por exemplo, salvar em um banco de dados, executar testes, etc.
         # Para simplicidade, vamos apenas passar esses dados para o contexto

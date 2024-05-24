@@ -13,6 +13,10 @@ const app = createApp({
 
   data() {
     return {
+      form : {
+        text: '',
+        source_code: '',
+      },
       isDarkMode: true,
     };
 

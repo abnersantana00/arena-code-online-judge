@@ -42,17 +42,32 @@
             </el-text>
             <el-divider ></el-divider>
 
-
+            <el-form :model="form" >
+                <el-form-item>
+                    <el-input type="textarea" v-model="form.text" placeholder="Write your code here..."></el-input>
+                </el-form-item>
+            </el-form>
+            <el-button type="success" plain >Submit Code</el-button>
         </el-card>
     </el-col>
 </el-row>
 
 
-
+<br><br>
+<el-divider ></el-divider>
+<br><br>
 
 <h4> All Problems : </h4>
+        {% for key, question in all_questions.items%}
+                <p> Title : {{question.title}} </p>
+                <p> Topic Name : {{key}} | Topic ID {{key}} | Problem ID {{key}}</p>
+                <p> Stem : {{question.stem | safe}} </p>
+        {% endfor %}
 
 
+<br><br><br><br>
+
+{{all_questions}}
 
 {% endblock %}
 
