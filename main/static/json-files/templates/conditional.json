@@ -72,7 +72,7 @@
   },
   {
     "topic_name": "conditional-aligned",
-    "topic_id": 10102,
+    "topic_id": "10102",
     "stem": "Base da estrutura 2 {var} {{{context2}}}",
     "variable": {
         "var": [
@@ -92,7 +92,7 @@
   },
   {
       "topic_name": "conditional-miscellaneous",
-      "topic_id": 10103,
+      "topic_id": "10103",
         "stem": "Base da estrutura 3",
         "variable": {
             "var1": "valorX",
@@ -101,7 +101,7 @@
     },
   {
       "topic_name": "example-structure",
-      "topic_id": 10103,
+      "topic_id": "10103",
         "stem": "Base da estrutura 3",
         "variable": {
             "var1": "valorX",

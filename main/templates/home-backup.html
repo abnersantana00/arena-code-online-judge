@@ -1,10 +1,53 @@
 
 
 
+
+
+{% extends "main/base.html" %}
+
+{% block content %}
+<el-row>
+    <el-col :span="24">
+        <h1>Bem-vindo ao Meu Projeto Django</h1>
+        <p>Este é um exemplo de integração do Element Plus com Django.</p>
+        <h1>TESTE</h1>
+
+        <template>
+  <div class="common-layout">
+    <el-container>
+      <el-header>Header</el-header>
+      <el-main>Main</el-main>
+      <el-footer>Footer</el-footer>
+    </el-container>
+  </div>
+</template>
+
+    </el-col>
+
+
+
+
+</el-row>
+{% endblock %}
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
+    <!-- conteudo especifico Element UI Plus -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Projeto Django com Element Plus</title>
+    <!-- Import style -->
+    <link rel="stylesheet" href="//unpkg.com/element-plus/dist/index.css" />
+    <!-- Import Vue 3 -->
+    <script src="//unpkg.com/vue@3"></script>
+    <!-- Import component library -->
+    <script src="//unpkg.com/element-plus"></script>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arena Code</title>
@@ -39,6 +82,12 @@
     </style>
 </head>
 <body>
+
+    <div id="app"></div>
+    <script src="{% static 'frontend/main.js' %}"></script>
+
+
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom">
         <div class="container">
             <a class="navbar-brand" href="#">

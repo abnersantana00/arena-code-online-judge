@@ -59,7 +59,7 @@ def extract_titles(json_file_path):
     with open(json_file_path, 'r') as file:
         data = json.load(file)
 
-    titles_info = [(item['topic_name'], item['topic_id']) for item in data]
+    titles_info = [{'topic_name': item['topic_name'], 'topic_id': item['topic_id']} for item in data]
     return titles_info
 # Oline Judge Automatized Tests
 def run_test(source_code, json_questions, problem_id):

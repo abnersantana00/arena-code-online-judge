@@ -11,7 +11,7 @@ import json
 import os
 def home(request):
 
-    return render(request, 'main/home.html')
+    return render(request, 'home.html')
 
 
 
@@ -23,7 +23,8 @@ def topic(request, topic_name):
          titles_info = extract_titles('main/static/json-files/templates/conditional.json')
          context = {'topic' : 'Contitionals',
                     'titles_info': titles_info,}
-         return render(request, 'main/topic.html', context)
+         print("titles_info =", titles_info)
+         return render(request, 'topic.html', context)
 
 
 def topic_detail(request, topic_name, title_name):

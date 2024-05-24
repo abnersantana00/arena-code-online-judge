@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+
+
+  <el-table   :data="{{titles_info|safe}}"  stripe border @row-click="handleRowClick" class="custom-table">
+      <el-table-column prop="topic_name" label="Name" /></el-table-column>
+      <el-table-column prop="topic_id" label="#" /></el-table-column>
+  </el-table>
+
+
+
+
+
+{% endblock %}
+
+

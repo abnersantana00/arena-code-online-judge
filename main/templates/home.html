@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<el-row>
+    <el-col :span="24">
+        <h1>Welcome! Select a topic to study</h1>
+
+    </el-col>
+    <el-col :span="24">
+        <el-divider content-position="left">Introduction Computer Programming</el-divider>
+        <el-space direction="horizontal" size="large">
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Input/Output</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">42 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false" href="{% url 'topic' topic_name='conditional' %}">
+                <el-card>
+                    <el-text class="mx-1 font-large">Conditionals</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">28 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">For Loops</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">12 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Lists and Arrays</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">8 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Functions</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">7 Questions</el-text>
+                </el-card>
+            </el-link>
+        </el-space>
+    </el-col>
+    <el-col :span="24">
+        <el-divider content-position="left">Data Structures and Libraries</el-divider>
+        <el-space direction="horizontal" size="large">
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Linked Lists</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">13 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Stacks</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">5 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Queues</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">7 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Trees</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">5 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Graphs</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">4 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Hash Tables</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">8 Questions</el-text>
+                </el-card>
+            </el-link>
+        </el-space>
+    </el-col>
+    <el-col :span="24">
+        <el-divider content-position="left">Strings</el-divider>
+        <el-space direction="horizontal" size="large">
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Basic Operations</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">3 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Character Manipulation</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">5 Questions</el-text>
+                </el-card>
+            </el-link>
+             <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Searching</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">10 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Regular Expressions</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">1 Question</el-text>
+                </el-card>
+            </el-link>
+        </el-space>
+    </el-col>
+    <el-col :span="24">
+        <el-divider content-position="left">Mathematics Problems</el-divider>
+        <el-space direction="horizontal" size="large">
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Prime Number</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">13 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Linear Algebra</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">21 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Computacional Geometry</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">4 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Numerical Methods</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">5 Questions</el-text>
+                </el-card>
+            </el-link>
+        </el-space>
+    </el-col>
+    <el-col :span="24">
+        <el-divider content-position="left">Data Bases SQL</el-divider>
+        <el-space direction="horizontal" size="large">
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Data Definition Language (DDL)</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">13 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Data Manipulation Language (DML)</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">1 Questions</el-text>
+                </el-card>
+            </el-link>
+            <el-link :underline="false">
+                <el-card>
+                    <el-text class="mx-1 font-large">Data Query Language (DQL)</el-text>
+                    <el-divider direction="vertical"></el-divider>
+                    <el-text class="mx-1 font-large">15 Questions</el-text>
+                </el-card>
+            </el-link>
+        </el-space>
+    </el-col>
+</el-row>
+
+
+
+{% endblock %}
