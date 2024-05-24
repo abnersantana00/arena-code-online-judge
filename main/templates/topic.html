@@ -7,9 +7,21 @@
 
 
 
-  <el-table   :data="{{titles_info|safe}}"  stripe border @row-click="handleRowClick" class="custom-table">
-      <el-table-column prop="topic_name" label="Name" /></el-table-column>
-      <el-table-column prop="topic_id" label="#" /></el-table-column>
+
+<h1> Topic : {{topic}} </h1>
+
+ <el-breadcrumb separator="/">
+    <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
+    <el-breadcrumb-item :to="{ path: '/' }">Conditional</el-breadcrumb-item>
+    <el-breadcrumb-item>Topic Detail</el-breadcrumb-item>
+    <el-breadcrumb-item>Submit Code</el-breadcrumb-item>
+  </el-breadcrumb>
+<el-divider content-position="left">Select One Topic</el-divider>
+
+
+  <el-table   :data="{{titles_info|safe}}"  stripe border @row-click="handleRowClick" @row-mouseenter="handleRowMouseEnter" class="custom-table">
+      <el-table-column prop="topic_name" label="Topic Name" /></el-table-column>
+      <el-table-column prop="topic_id" label="Code" /></el-table-column>
   </el-table>
 
 

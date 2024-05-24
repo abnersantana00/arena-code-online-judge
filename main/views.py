@@ -17,20 +17,24 @@ def home(request):
 
 
 # condicionais
-def topic(request, topic_name):
+def topic(request, topic):
 
-    if topic_name == 'conditional':
+    if topic == 'conditional':
          titles_info = extract_titles('main/static/json-files/templates/conditional.json')
          context = {'topic' : 'Contitionals',
-                    'titles_info': titles_info,}
-         print("titles_info =", titles_info)
+                    'titles_info': titles_info,
+                    'topic': topic,
+                    }
+
+
+
          return render(request, 'topic.html', context)
 
 
-def topic_detail(request, topic_name, title_name):
+def topic_detail(request, topic, title_name):
     # Construindo os caminhos dos arquivos com base no topic_name
-    file1 = f'main/static/json-files/templates/{topic_name}.json'
-    file2 = f'main/static/json-files/questions/{topic_name}-questions.json'
+    file1 = f'main/static/json-files/templates/{topic}.json'
+    file2 = f'main/static/json-files/questions/{topic}-questions.json'
 
     # Lendo os arquivos JSON
     with open(file1, 'r', encoding='utf-8') as file:
@@ -44,24 +48,24 @@ def topic_detail(request, topic_name, title_name):
 
     context = {
         'title_name': title_name,
-        'topic_name': topic_name,
+        'topic': topic,
         'all_questions': all_questions,
         'one_question' : one_question
     }
 
 
-    return render(request, 'main/topic_detail.html', context)
+    return render(request, 'topic_detail.html', context)
 
 
 
 @csrf_protect
-def source_code(request, topic_name, title_name):
+def source_code(request, topic, title_name):
     if request.method == 'POST':
         source_code = request.POST.get('source_code')
         topic_id = request.POST.get('topic_id')
         problem_id = request.POST.get('problem_id')
 
-        file2 = f'main/static/json-files/questions/{topic_name}-questions.json'
+        file2 = f'main/static/json-files/questions/{topic}-questions.json'
         with open(file2, 'r', encoding='utf-8') as file:
             json_questions = json.load(file)
 
@@ -73,7 +77,7 @@ def source_code(request, topic_name, title_name):
         # Para simplicidade, vamos apenas passar esses dados para o contexto
         print("run_test :", type(source_code), source_code, type(json_questions), type(problem_id), problem_id)
         context = {
-            'topic_name': topic_name,
+            'topic': topic,
             'title_name': title_name,
             'source_code': source_code,
             'topic_id': topic_id,

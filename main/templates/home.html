@@ -6,8 +6,16 @@
 <el-row>
     <el-col :span="24">
         <h1>Welcome! Select a topic to study</h1>
-
     </el-col>
+
+    <el-breadcrumb separator="/">
+    <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
+    <el-breadcrumb-item>Topic</el-breadcrumb-item>
+    <el-breadcrumb-item>Topic Detail</el-breadcrumb-item>
+    <el-breadcrumb-item>Submit Code</el-breadcrumb-item>
+  </el-breadcrumb
+
+
     <el-col :span="24">
         <el-divider content-position="left">Introduction Computer Programming</el-divider>
         <el-space direction="horizontal" size="large">
@@ -18,7 +26,7 @@
                     <el-text class="mx-1 font-large">42 Questions</el-text>
                 </el-card>
             </el-link>
-            <el-link :underline="false" href="{% url 'topic' topic_name='conditional' %}">
+            <el-link :underline="false" href="{% url 'topic' topic='conditional' %}">
                 <el-card>
                     <el-text class="mx-1 font-large">Conditionals</el-text>
                     <el-divider direction="vertical"></el-divider>

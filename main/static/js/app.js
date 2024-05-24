@@ -16,6 +16,7 @@ const app = createApp({
       isDarkMode: true,
     };
 
+
   },
 
 
@@ -45,7 +46,8 @@ const app = createApp({
     },
     handleRowClick(row) {
       // Redireciona para a página do tópico com base no topic_id
-      window.location.href = `/topic/${row.topic_id}`;
+      const url = `${row.topic_name}`;
+      window.location.href = url;
     },
 
   }
