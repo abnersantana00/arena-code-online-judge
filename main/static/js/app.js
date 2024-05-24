@@ -46,7 +46,7 @@ const app = createApp({
     },
     handleRowClick(row) {
       // Redireciona para a página do tópico com base no topic_id
-      const url = `${row.topic_name}`;
+      const url = `$'topic'/${row.topic_name}`;
       window.location.href = url;
     },
 
