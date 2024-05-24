@@ -14,6 +14,9 @@ const app = createApp({
   data() {
     return {
       isDarkMode: true,
+      form : {
+        code :'',
+      }
     };
 
   },

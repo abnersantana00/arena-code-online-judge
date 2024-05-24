@@ -42,12 +42,12 @@
             </el-text>
             <el-divider ></el-divider>
 
-            <el-form :model="form">
+            <el-form :model="form" @submit.prevent="onSubmit">
                 <el-form-item>
-                    <el-input type="textarea"  placeholder="Write your code here..."></el-input>
+                    <el-input v-model="form.code" type="textarea" placeholder="Write your code here..."></el-input>
                 </el-form-item>
+                <el-button type="success" plain @click="onSubmit">Submit Code</el-button>
             </el-form>
-            <el-button type="success" plain >Submit Code</el-button>
         </el-card>
     </el-col>
 </el-row>
