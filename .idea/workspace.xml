@@ -7,9 +7,7 @@
     <list default="true" id="efbed02c-f6a1-40a1-9a4a-c627ecad5392" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/json-files/templates/conditional.json" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/json-files/templates/conditional.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/templates/topic_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/topic_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +164,7 @@
       <workItem from="1716423606124" duration="1095000" />
       <workItem from="1716425149687" duration="104000" />
       <workItem from="1716425421973" duration="43816000" />
-      <workItem from="1716566687072" duration="15859000" />
+      <workItem from="1716566687072" duration="17261000" />
     </task>
     <servers />
   </component>

@@ -13,13 +13,8 @@ const app = createApp({
 
   data() {
     return {
-      form : {
-        text: '',
-        source_code: '',
-      },
       isDarkMode: true,
     };
-
 
   },
 
@@ -50,7 +45,8 @@ const app = createApp({
     },
     handleRowClick(row) {
       // Redireciona para a página do tópico com base no topic_id
-      const url = `$'topic'/${row.topic_name}`;
+      window.location.href = `/topic/${row.topic_id}`;
+      const url = `${row.topic_name}`;
       window.location.href = url;
     },
 
