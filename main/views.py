@@ -44,7 +44,7 @@ def topic_detail(request, topic, title_name):
 
     all_questions = generate_all_questions(json_template,json_questions )
     one_question = generate_one_question(json_template, json_questions, "102024")
-    print(one_question)
+
 
     context = {
         'title_name': title_name,
@@ -60,6 +60,8 @@ def topic_detail(request, topic, title_name):
 
 
 def source_code(request, topic, title_name):
+    code = request.POST.get('code')
+    print("------- codes ----", code)
     if request.method == 'POST':
         code = request.POST.get('code', '')  # Obtém o código do request.POST
         print("source does CODE  : ", code)
@@ -88,6 +90,28 @@ def source_code(request, topic, title_name):
             'code': code,
         }
 
+        return render(request, 'topic_source_code.html', context)
+
+    return render(request, 'topic_source_code.html')
+
+
+
+
+def source_code(request, title_name):
+
+    if request.method == 'POST':
+        code = request.POST.get('code', '')
+        problem_id = request.POST.get('problem_id')
+        file2 = f'main/static/json-files/questions/{topic}-questions.json'
+        with open(file2, 'r', encoding='utf-8') as file:
+            json_questions = json.load(file)
+        result = run_test(source_code, json_questions,problem_id)
+        context = {
+            'title_name': title_name,
+            'source_code': source_code,
+            'result': result,
+            'code': code,
+        }
         return render(request, 'topic_source_code.html', context)
 
     return render(request, 'topic_source_code.html')

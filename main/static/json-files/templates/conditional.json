@@ -28,7 +28,7 @@
         "A classificação de um trîangulo pode ser feita com base na medida de seus lados e ângulos, identificando características específicas que ajudam na resolução de problemas geométricos e na compreensão de propriedades especiais. Dado três números representando os lados ded um triângulo, é necessário ordená-los em ordem decrescente e dedterminar o tipo de triângulo que eles formam, seguindo critérioes especificos de classificação baseado nas relações entre os comprimento dos lados.",
         "Baseado nestas informações desenvolva um programa que leia o salário bruto do funcionário, a quantidade de dependentes que ele possui, e calcule o salário liquido considerando o desconto do INSS e os benefíciso adicionais.",
         "Gastos com despesas médicas particulares podem ser deduzidas com o intuito do contribuinte ter um desconto na base de cálculo. Analise a tabela de imposto de renda abaixo, calcule o valor devivo para todos os limites estabelecidos considerando algumas despesas médicas sinificativas de tal maneira que seja reduzido o montate tributável ",
-        "Escreva um programa que imprima Hello Word!!!"
+        "Escreva um programa que recebe um número inteiro como entrada. Se o número for positivo, o programa deve imprimir \"Positive Number\". Se o número for negativo, o programa deve imprimir \"Negative Number\". Caso o número seja zero, o programa deve imprimir \"Zero\"."
       ],
       "table_comparison": [
         "<br><br> <table>\n  <tr>\n    <th>DDD</th>\n    <th>Destino</th>\n  </tr>\n  <tr>\n    <td>61</td>\n    <td>Brasilia</td>\n  </tr>\n  <tr>\n    <td>71</td>\n    <td>Salvador</td>\n  </tr>\n  <tr>\n    <td>11</td>\n    <td>São Paulo</td>\n  </tr>\n  <tr>\n    <td>31</td>\n    <td>Belo Horizonte</td>\n  </tr>\n  <tr>\n    <td>84</td>\n    <td>Rio Grande do Norte</td>\n  </tr>\n  <tr>\n    <td>85</td>\n    <td>Ceará</td>\n  </tr>\n  <tr>\n    <td>81</td>\n    <td>Pernambuco</td>\n  </tr>\n</table>\n <br><br>",
@@ -36,7 +36,7 @@
         "<br><br><br><img src=\"/static/template-questions/img/conditional-model/the-change.webp\" alt=\"Imagem\"><br><br><br>",
         "<br><br> <table>\n  <tr>\n    <th>Condição</th>\n    <th>Classificação</th>\n  </tr>\n  <tr>\n    <td>A ≥ B + C</td>\n    <td>NAO FORMA TRIANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 = B^2 + C^2</td>\n    <td>TRIANGULO RETANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 > B^2 + C^2</td>\n    <td>TRIANGULO OBTUSANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 < B^2 + C^2</td>\n    <td>TRIANGULO ACUTANGULO </td>\n  </tr>\n  <tr>\n    <td>A = B = C</td>\n    <td>TRIANGULO EQUILATERO </td>\n  </tr>\n  <tr>\n    <td>(A = B ≠ C) or (A = C ≠ B) or (B = C ≠ A)</td>\n    <td>TRIANGULO ISOSCELES </td>\n  </tr>\n</table>\n <br><br>",
         "<br><br> <table>\n  <tr>\n    <th>Salário</th>\n    <th>Alíquota (INSS)</th>\n  </tr>\n  <tr>\n    <td>Até R$ 1.412,00</td>\n    <td>7,5%</td>\n  </tr>\n  <tr>\n    <td>De R$ 1.412,01 até R$ 2.666,68</td>\n    <td>9,0%</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.666,69 até R$ 4.000,03</td>\n    <td>12%</td>\n  </tr>\n  <tr>\n    <td>De R$ 4.000,04 até R$ 7.786,02</td>\n    <td>14% </td>\n  </tr>\n</table>\n <br><br>",
-        "  "
+        " "
 ],
       "solicitation": [
         "Se o número de entrada não for encontrado na tabela acima, a saída deve ser \"Valor não cadastrado\" ",
@@ -56,7 +56,7 @@
         "<br><br><strong>Entrada: </strong><br> A entrada contém um número inteiro M (0 <= M <= 360), Como a posição muda constantemente, o seu programa receberá vários casos de teste.",
         "<br><br><strong>Entrada: </strong><br> Os valores de entrada contém três números decimais, A, B e C (0< A, B, C).",
         "<br><br><strong>Entrada: </strong><br> Três valores de entrada, o primeiro é uma string, o segundo é um valor do salário com dois dígitos após o ponto decimal, e o terceiro é um valor inteiro maior ou igual a zero.",
-        "<br><br><strong>Entrada: </strong><br>"
+        "<br><br><strong>Entrada: </strong><br> Um numero Inteiro"
       ],
       "output": [
         "<br><br><strong>Saída: </strong><br> Imprima exatamente o nome correspondente como está descrito na segunda coluna. Imprima \"Valor não cadastrado\" se não existir um valor correspondente ao número digitado.",
@@ -65,7 +65,7 @@
         "<br><br><strong>Saída: </strong><br> A saída deve imprimir todas as classificações do triângulo apresentado na entrada, conforme a tabela de comparação.",
         "<br><br><strong>Saída: </strong><br> Imprima o nome do funcionário, e o salário liquido",
         "<br><br><strong>Saída: </strong><br> Imprima o valor de imposto devido e na linha seguinte o valor de imposto após as deduções",
-        "<br><br><strong>Saída: </strong><br> Hello Word!!!"
+        "<br><br><strong>Saída: </strong><br> \"Positive Number\" se o número for positivo. <br>  \"Negative Number\" se o número for negativo. <br> \"Zero\" se o número for zero."
 
       ]
     }

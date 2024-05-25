@@ -44,7 +44,7 @@
 
 
             <el-form :model="form" @submit.prevent="onSubmit">
-                {% csrf_token %}
+
     <el-form-item>
       <el-input v-model="form.code" type="textarea" placeholder="Write your code here..."></el-input>
     </el-form-item>
@@ -60,7 +60,7 @@
 <br><br>
 
 <h4> All Problems : </h4>
-
+<br><br>
         {% for key, question in all_questions.items%}
                 <p> Title : {{question.title}} </p>
                 <p> Topic Name : {{key}} | Topic ID {{key}} | Problem ID {{key}}</p>
