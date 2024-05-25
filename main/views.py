@@ -58,9 +58,11 @@ def topic_detail(request, topic, title_name):
 
 
 
-@csrf_protect
+
 def source_code(request, topic, title_name):
     if request.method == 'POST':
+        code = request.POST.get('code', '')  # Obtém o código do request.POST
+        print("source does CODE  : ", code)
         source_code = request.POST.get('source_code')
         topic_id = request.POST.get('topic_id')
         problem_id = request.POST.get('problem_id')
@@ -83,8 +85,9 @@ def source_code(request, topic, title_name):
             'topic_id': topic_id,
             'problem_id': problem_id,
             'result' : result,
+            'code': code,
         }
 
-        return render(request, 'main/topic_source_code.html', context)
+        return render(request, 'topic_source_code.html', context)
 
-    return render(request, 'main/topic_source_code.html')
+    return render(request, 'topic_source_code.html')

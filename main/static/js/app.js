@@ -26,6 +26,29 @@ const app = createApp({
     this.setDarkMode();
   },
   methods: {
+
+    onSubmit() {
+      const formData = new FormData();
+      formData.append('code', this.form.code);
+
+      // Construa a URL dinâmica usando os parâmetros
+      const url = `/${this.topic}/${this.title_name}/source-code/`;
+
+      fetch(url, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        console.log('Success:', data);
+        // Redireciona para a página do tópico
+        window.location.href = `source-code`;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    },
+
     toggleDarkMode() {
       this.isDarkMode = !this.isDarkMode;
       this.setDarkMode();
@@ -38,20 +61,14 @@ const app = createApp({
         document.documentElement.removeAttribute('class', 'dark');
       }
     },
-    onSubmit() {
-      console.log('submit!', this.form);
-      ElMessage({
-        message: 'Form submitted successfully!',
-        type: 'success',
-      });
 
-    },
     handleRowClick(row) {
       // Redireciona para a página do tópico com base no topic_id
       window.location.href = `/topic/${row.topic_id}`;
       const url = `${row.topic_name}`;
       window.location.href = url;
     },
+
 
   }
 });
@@ -85,3 +102,7 @@ app.component('el-breadcrumb', ElBreadcrumb);
 
 
 app.mount('#app');
+
+
+
+
