@@ -5,35 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efbed02c-f6a1-40a1-9a4a-c627ecad5392" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/main/static/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arenacode/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/arenacode/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/jsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vue.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/json-files/questions/conditional-questions.json" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/json-files/questions/conditional-questions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/json-files/templates/conditional.json" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/json-files/templates/conditional.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/home-backup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/topic-backup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/topic.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/topic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/topic_detail-backup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/topic_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/topic_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/topic_source_code.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/topic_source_code.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +164,7 @@
       <workItem from="1716425149687" duration="104000" />
       <workItem from="1716425421973" duration="43816000" />
       <workItem from="1716566687072" duration="29499000" />
-      <workItem from="1716670082479" duration="16867000" />
+      <workItem from="1716670082479" duration="17191000" />
     </task>
     <servers />
   </component>

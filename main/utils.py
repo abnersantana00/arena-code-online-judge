@@ -95,7 +95,8 @@ def run_test(source_code, json_questions, problem_id):
         return "Erro de execução: Tempo limite excedido"
 
     if completed_process.returncode != 0:
-        return f"Erro de execução com código de retorno {completed_process.returncode}"
+        error_details = completed_process.stderr.strip()
+        return f"Erro de execução: {error_details}"
 
     if len(actual_output) != len(expected_output):
         return "Erro de saída"
