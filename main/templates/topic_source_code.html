@@ -4,9 +4,38 @@
 
 <h4> SOURCE CODE </h4>
 <hr>
-<h5>Problem: {{problem_id}} - {{topic_name}}</h5>
-<h5> Answer : {{result}} </h5>
+<p><b>Problem:</b> {{problem_id}} - {{topic_name}}</p>
+<p><b>Answer</b> : {{result.answer}} </p>
+<p><b> Language</b> : Python3 </p>
+<p><b>runtime</b> : {{result.time_execution}}s</p>
 
+<h1>diference</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Your Output</th>
+            <th>Output Expected</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{result.actual_output}}</td>
+            <td>{{result.output_expected}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Runtime Error:</h4>
+{{result.runtime_error}}
+<h4> Your Code : </h4>
+{{code_submission}}
+
+<h4>Expected Code Base :</h4>
+{{result.base_code}}
+
+
+<br><br><br><br>
+{{result}}
 
 
 {% endblock %}

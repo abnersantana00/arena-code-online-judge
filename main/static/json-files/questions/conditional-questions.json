@@ -95,7 +95,9 @@
                     "Hello Word!!!"
                 ],
                 "time_limit": "1000",
-                "memory_limit": "20"
+                "memory_limit": "20",
+                "file_size_max" : "1000",
+                "base_code" : "print(\"Hello Word\")"
             },
             {
                 "problem_id": "00106",

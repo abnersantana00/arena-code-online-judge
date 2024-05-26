@@ -1,4 +1,4 @@
-import  json, random, subprocess, difflib, sys
+import  json, random, subprocess, difflib, sys, time
 def generate_all_questions(json_template, json_questions):
     questions = {}
 
@@ -62,7 +62,94 @@ def extract_titles(json_file_path):
     titles_info = [{'topic_name': item['topic_name'], 'topic_id': item['topic_id']} for item in data]
     return titles_info
 # Oline Judge Automatized Tests
+import sys
+import subprocess
+import difflib
+import time
+
 def run_test(source_code, json_questions, problem_id):
+    judge_code = {
+        "runtime_error": None,
+        "file_size": None,
+        "file_size_max": None,
+        "time_execution": None,
+        "time_limit": None,
+        "percentage": None,
+        "actual_output": None,
+        "output_expected": None,
+        "base_code": None,
+        "answer": None
+    }
+
+    if not source_code.strip():
+        judge_code["runtime_error"] = "Erro por não digitar o código em branco"
+        judge_code["answer"] = "Runtime error"
+        return judge_code
+
+    problem = None
+    for item in json_questions:
+        if problem_id in [p['problem_id'] for p in item.get('problems', [])]:
+            problem = next(p for p in item['problems'] if p['problem_id'] == problem_id)
+            break
+
+    if problem is None:
+        judge_code["runtime_error"] = "Erro: Problema não encontrado"
+        judge_code["answer"] = "Runtime error"
+        return judge_code
+
+    judge_code["base_code"] = problem.get('base_code', None)
+    input_data = problem['input_expected']
+    output_expected = problem['output_expected']
+    judge_code["output_expected"] = output_expected[0] if output_expected else None
+    judge_code["time_limit"] = int(problem['time_limit'])
+
+    try:
+        # Utilizando o caminho absoluto do executável Python
+        python_executable = sys.executable
+        start_time = time.time()
+        completed_process = subprocess.run(
+            [python_executable, "-c", source_code],
+            input='\n'.join(input_data).encode(),
+            capture_output=True,
+            text=True,
+            timeout=judge_code["time_limit"]
+        )
+        end_time = time.time()
+        judge_code["time_execution"] = round(end_time - start_time, 3)
+        judge_code["actual_output"] = completed_process.stdout.strip()
+    except subprocess.CalledProcessError as e:
+        judge_code["runtime_error"] = f"Erro de execução: {e}"
+        judge_code["answer"] = "Runtime error"
+        return judge_code
+    except subprocess.TimeoutExpired:
+        judge_code["runtime_error"] = "Erro de execução: Tempo limite excedido"
+        judge_code["answer"] = "Runtime error"
+        return judge_code
+
+    if completed_process.returncode != 0:
+        judge_code["runtime_error"] = completed_process.stderr.strip()
+        judge_code["answer"] = "Runtime error"
+        return judge_code
+
+    if judge_code["actual_output"] != judge_code["output_expected"]:
+        judge_code["runtime_error"] = "Erro de saída"
+        judge_code["answer"] = "Runtime error"
+        return judge_code
+
+    judge_code["percentage"] = 100
+    judge_code["answer"] = "Success"
+    return judge_code
+
+    similarity = difflib.SequenceMatcher(None, judge_code["actual_output"], judge_code["output_expected"]).ratio()
+    judge_code["percentage"] = int(similarity * 100)
+
+    if 1 <= judge_code["percentage"] <= 99:
+        judge_code["runtime_error"] = f"Resposta errada {judge_code['percentage']}%"
+        judge_code["answer"] = f"wrong answer {judge_code['percentage']}%"
+
+    return judge_code
+
+def run_test_v0(source_code, json_questions, problem_id):
     if not source_code.strip():
         return "Erro por não digitar o código em branco"
 
@@ -76,7 +163,7 @@ def run_test(source_code, json_questions, problem_id):
         return "Erro: Problema não encontrado"
 
     input_data = problem['input_expected']
-    expected_output = problem['output_expected']
+    output_expected = problem['output_expected']
 
     try:
         # Utilizando o caminho absoluto do executável Python
@@ -98,19 +185,19 @@ def run_test(source_code, json_questions, problem_id):
         error_details = completed_process.stderr.strip()
         return f" Runtime Error :  {error_details}"
 
-    if len(actual_output) != len(expected_output):
-        return "Erro de saída"
+    if len(actual_output) != len(output_expected):
+        return print("Erro de saída", actual_output, output_expected)
 
     correct_count = 0
-    for actual, expected in zip(actual_output, expected_output):
+    for actual, expected in zip(actual_output, output_expected):
         if actual == expected:
             correct_count += 1
 
-    if correct_count == len(expected_output):
+    if correct_count == len(output_expected):
         return "Sucesso"
 
     similarity = sum([difflib.SequenceMatcher(None, actual, expected).ratio() for actual, expected in
-                      zip(actual_output, expected_output)]) / len(expected_output)
+                      zip(actual_output, output_expected)]) / len(output_expected)
     percentage = int(similarity * 100)
 
     if 1 <= percentage <= 99:
