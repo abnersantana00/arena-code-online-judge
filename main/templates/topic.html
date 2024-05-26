@@ -2,32 +2,37 @@
 
 {% block content %}
 
+<h3> Topic : {{topic}} </h3>
+<nav>
+    <ol>
+        <li><a href="/">home</a> </li>
+        <li><a href="/{{topic}}">{{topic}}</a></li>
+        <li>topic detail</li>
+        <li>submit code</li>
+    </ol>
+</nav>
 
+<h3> Lists Questions :  </h3>
 
-
-
-
-
-<h1> Topic : {{topic}} </h1>
-
- <el-breadcrumb separator="/">
-    <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
-    <el-breadcrumb-item :to="{ path: '/' }">Conditional</el-breadcrumb-item>
-    <el-breadcrumb-item>Topic Detail</el-breadcrumb-item>
-    <el-breadcrumb-item>Submit Code</el-breadcrumb-item>
-  </el-breadcrumb>
-<el-divider content-position="left">Select One Topic</el-divider>
-
-
-  <el-table   :data="{{titles_info|safe}}"  stripe border @row-click="handleRowClick" @row-mouseenter="handleRowMouseEnter" class="custom-table">
-      <el-table-column prop="topic_name" label="Topic Name" /></el-table-column>
-      <el-table-column prop="topic_id" label="Code" /></el-table-column>
-  </el-table>
-
-
-
+<table border="1">
+    <thead>
+        <tr>
+            <th>Topics</th>
+            <th>Topic ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in titles_info %}
+        <tr>
+            <td><a href="{{item.topic_name}}">{{ item.topic_name }}</a></td>
+            <td>{{ item.topic_id }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
 
 {% endblock %}
+
 
 

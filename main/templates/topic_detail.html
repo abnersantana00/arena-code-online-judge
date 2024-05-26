@@ -2,76 +2,57 @@
 
 {% block content %}
 
+<h3> Topic : {{topic}} </h3>
+<nav>
+    <ol>
+        <li><a href="/">home</a> </li>
+        <li><a href="/{{topic}}">{{topic}}</a></li>
+        <li> <a href="">{{topic_name}}</a></li>
+        <li>submit code</li>
+    </ol>
+</nav>
 
-
-
-
-
-
-
-
- <el-breadcrumb separator="/">
-    <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
-    <el-breadcrumb-item :to="{ path: '/' }">{{topic}}</el-breadcrumb-item>
-    <el-breadcrumb-item :to="{ path: '/' }">{{title_name}}</el-breadcrumb-item>
-    <el-breadcrumb-item>Submit Code</el-breadcrumb-item>
-  </el-breadcrumb>
-<el-divider content-position="left">Read the statement</el-divider>
-
-<el-row class="row-bg"  >
-    <el-col :span="14">
-        <el-card style="max-width: 95%">
-            <h4>Questão : </h4>
-            <el-text>
-                {{one_question.stem | safe}}
-            </el-text>
-            <br><br>
-            <el-button type="primary" plain >Other Problem</el-button>
-
-        </el-card>
-    </el-col>
-
-    <el-col :span="10">
-        <el-card style="max-width: 480px">
-            <el-text>
-                Problem : 1202
-                <el-divider direction="vertical"></el-divider>
-                Question : 1690
-                <el-divider direction="vertical"></el-divider>
-                Python 3.12.3
-            </el-text>
-            <el-divider ></el-divider>
-
-
-            <el-form :model="form" @submit.prevent="onSubmit">
-
-    <el-form-item>
-      <el-input v-model="form.code" type="textarea" placeholder="Write your code here..."></el-input>
-    </el-form-item>
-    <el-button type="success" native-type="submit" plain @click="onSubmit">Submit Code</el-button>
-  </el-form>
-        </el-card>
-    </el-col>
-</el-row>
-
-
+<hr>
+<section>
+<h4> Topic Detail :  </h4>
+<b>{{one_question.title}} </b>
+<h5>Enunciado: </h5>
+{{one_question.stem | safe}}
 <br><br>
-<el-divider ></el-divider>
-<br><br>
+<table border="1">
+        <tr>
+            <th>Input Sample</th>
+            <th>Output Sample</th>
+        </tr>
+        <tr>
+            <td> </td>
+            <td>Hello Word!!!</td>
+        </tr>
+    </table>
+<br>
+<a href="">Outro Problema</a>
+<hr>
+</section>
+<br>
 
-<h4> All Problems : </h4>
-<br><br>
-        {% for key, question in all_questions.items%}
-                <p> Title : {{question.title}} </p>
-                <p> Topic Name : {{key}} | Topic ID {{key}} | Problem ID {{key}}</p>
-                <p> Stem : {{question.stem | safe}} </p>
-        {% endfor %}
+<section>
+    <h5>Problem: {{one_question.topic_id}} | Question : </h5>
+    <form  method="POST" action="{% url 'source_code' topic=topic topic_name=topic_name problem_id=problem_id  %}">
+        {% csrf_token %}
+        <textarea name="code_submission"  placeholder="Write your code here..."></textarea>
+        <input type="submit" value="Submit Code">
+    </form>{one_question.problem_id}}  | Language: Python 3.12.3
+
+<br><br><br>
+</section>
 
 
-<br><br><br><br>
-
-{{all_questions}}
+<hr>
+{{one_question | safe}}
+<h3> All Questions :  </h3>
+ {{all_questions }}
 
 {% endblock %}
+
 
 

@@ -1,98 +1,21 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arena Code</title>
-    <!-- Import style -->
-    <link rel="stylesheet" href="//unpkg.com/element-plus/dist/index.css" />
-    <!-- Import dark mode style -->
-    <link rel="stylesheet" href="//unpkg.com/element-plus/theme-chalk/dark/css-vars.css" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .el-header {
-            background-color: #1d3043;
-            color: white;
-            text-align: center;
-            line-height: 60px;
-            font-size: 20px;
-        }
-        .el-footer {
-            background-color: #1d3043;
-            color: white;
-            text-align: center;
-            line-height: 60px;
-        }
-        .el-main {
-            padding: 20px;
-            min-height: calc(100vh - 120px);
-        }
-        .toggle-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-        .flex {
-            display: flex;
-        }
-        .items-center {
-            align-items: center;
-        }
-        .mr-3 {
-            margin-right: 1rem;
-        }
-        .text-large {
-            font-size: 1.25rem;
-        }
-        .font-600 {
-            font-weight: 600;
-        }
-        .text-sm {
-            font-size: 0.875rem;
-        }
-        .custom-table .el-table__row:hover {
-          cursor: pointer;
-        }
-        .hidden-column {
-      display: none;
-        }
-
-    </style>
+    <title>{% block title %}Arena Code{% endblock %}</title>
+    <link rel="stylesheet" href="">
 </head>
 <body>
-    <div id="app">
-        {% csrf_token %}
-        <el-container>
-            <el-header>
-                <div class="flex items-center">
-                    <el-avatar :size="32" class="mr-3" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
-                     <a href="/" class="text-large font-600 mr-3" style="color: white; text-decoration: none;">Arena Code</a>
-                    <span class="text-sm mr-2" style="color: var(--el-text-color-regular)"> Inteligent Online Judge </span>
-                </div>
-            </el-header>
-            <el-main>
-                {% block content %}
-                {% endblock %}
-            </el-main>
-            <el-footer>&copy; 2024 Arena Code. All rights reserved.</el-footer>
-        </el-container>
-        <el-button class="toggle-button" type="info" @click="toggleDarkMode">
-            [[ isDarkMode ? 'Disable dark mode' : 'Activate dark mode' ]]
-        </el-button>
+    <header>
+        <a href="\">Arena Code</a>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
 
-
-    </div>
-    <!-- Import Vue 3 -->
-    <script src="//unpkg.com/vue@3"></script>
-    <!-- Import component library -->
-    <script src="https://unpkg.com/vue@next"></script>
-    <script src="//unpkg.com/element-plus"></script>
-    <script src="{% static 'js/app.js' %}"></script>
-
-
+    </footer>
 </body>
 </html>
