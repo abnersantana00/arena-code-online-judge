@@ -96,7 +96,7 @@ def run_test(source_code, json_questions, problem_id):
 
     if completed_process.returncode != 0:
         error_details = completed_process.stderr.strip()
-        return f"Erro de execução: {error_details}"
+        return f" Runtime Error :  {error_details}"
 
     if len(actual_output) != len(expected_output):
         return "Erro de saída"
@@ -118,4 +118,3 @@ def run_test(source_code, json_questions, problem_id):
 
     return "Erro de saída"
 
-# 

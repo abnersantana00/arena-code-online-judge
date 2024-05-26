@@ -64,6 +64,7 @@ def source_code(request, topic, topic_name, problem_id):
         context = {
             'topic': topic,
             'topic_name': topic_name,
+            'problem_id' : problem_id,
             'code_submission': code_submission,
             'result' : result,
         }
