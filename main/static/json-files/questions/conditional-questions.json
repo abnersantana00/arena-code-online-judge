@@ -36,7 +36,7 @@
                 "time_limit": "1000",
                 "memory_limit": "20",
                 "file_size_max" : "1000",
-                "base_code" : "ddd = int(input(\\\"Digite o DDD: \\\"))\\n\\n# Utilize estruturas de decisão para verificar o DDD e imprimir o destino\\nif ddd == 61:\\n    print(\\\"Brasilia\\\")\\nelif ddd == 71:\\n    print(\\\"Salvador\\\")\\nelif ddd == 11:\\n    print(\\\"São Paulo\\\")\\nelif ddd == 31:\\n    print(\\\"Belo Horizonte\\\")\\nelif ddd == 84:\\n    print(\\\"Rio Grande do Norte\\\")\\nelif ddd == 85:\\n    print(\\\"Ceará\\\")\\nelif ddd == 81:\\n    print(\\\"Pernambuco\\\")\\nelse:\\n    print(\\\"Valor não cadastrado\\\")"
+                "base_code" : "def identify_destination(ddd):\nif ddd == 61:\nprint(\"Brasilia\")\nelif ddd == 71:\nprint(\"Salvador\")\nelif ddd == 11:\nprint(\"São Paulo\")\nelif ddd == 31:\nprint(\"Belo Horizonte\")\nelif ddd == 84:\nprint(\"Rio Grande do Norte\")\nelif ddd == 85:\nprint(\"Ceará\")\nelif ddd == 81:\nprint(\"Pernambuco\")\nelse:\nprint(\"Valor não cadastrado\")\n\n# Exemplo de uso:\nddd = int(input())\nidentify_destination(ddd)"
             },
             {
                 "problem_id": "1202",
@@ -49,7 +49,31 @@
                     "solicitation": 4,
                     "input": 0,
                     "output": 0
-                }
+                },
+                "input_expected": [
+                    "61",
+                    "71",
+                    "11",
+                    "31",
+                    "84",
+                    "85",
+                    "81",
+                    "12"
+                ],
+                "output_expected": [
+                    "Brasilia",
+                    "Salvador",
+                    "São Paulo",
+                    "Belo Horizonte",
+                    "Rio Grande do Norte",
+                    "Ceará",
+                    "Pernambuco",
+                    "Valor não cadastrado"
+                ],
+                "time_limit": "1000",
+                "memory_limit": "20",
+                "file_size_max" : "1000",
+                "base_code" : ""
             },
             {
                 "problem_id": "1203",

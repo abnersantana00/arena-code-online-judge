@@ -19,22 +19,61 @@
     </thead>
     <tbody>
         <tr>
-            <td>{{result.actual_output}}</td>
-            <td>{{result.output_expected}}</td>
+            <td>
+             {% for output_actual in result.actual_output %}
+                    {{ output_actual }}
+                <br>
+                {% endfor %}
+            </td>
+
+            <td>
+                {% for expected_output in result.output_expected %}
+                    {{ expected_output }}
+                <br>
+                {% endfor %}
+            </td>
         </tr>
     </tbody>
 </table>
 
 <h4>Runtime Error:</h4>
 <p> {{result.runtime_error}} </p>
-<h4> Your Code : </h4>
-<p> {{code_submission}} </p>
 
-<h4>Expected Code Base :</h4>
-<p>{{result.base_code | safe}}</p>
+<hr>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Your Code</th>
+            <th>Expected Code Base</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+            {% filter linebreaksbr %}
+                <p> {{code_submission | safe }} </p>
+            {% endfilter %}
+            </td>
+
+            <td>
+            {% filter linebreaksbr %}
+                <p>{{result.base_code | safe}}</p>
+            {% endfilter %}
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 
-<br><br><br><br>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 {{result}}
 
 

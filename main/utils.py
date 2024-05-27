@@ -21,8 +21,10 @@ def generate_all_questions(json_template, json_questions):
             problem_id = problem['problem_id']
             variable_indices = problem['variable']
             title = problem.get('title', 'No Title')  # Obtém o título do problema
-            filled_stem = stem_template
+            input_expected = problem.get('input_expected', '\n')
+            output_expected = problem.get('output_expected', '\n')
 
+            filled_stem = stem_template
             for key, index in variable_indices.items():
                 placeholder = "{{" + key + "}}"
                 if key in variables and index < len(variables[key]):
@@ -38,6 +40,8 @@ def generate_all_questions(json_template, json_questions):
                 "problem_id": problem_id,
                 "title": title,
                 "stem": filled_stem,
+                "input_expected": input_expected,
+                "output_expected": output_expected,
             }
 
     return questions
@@ -62,6 +66,8 @@ def extract_titles(json_file_path):
     titles_info = [{'topic_name': item['topic_name'], 'topic_id': item['topic_id']} for item in data]
     return titles_info
 # Oline Judge Automatized Tests
+
+
 def run_test(source_code, json_questions, problem_id):
     judge_code = {
         "runtime_error": None,
@@ -70,7 +76,7 @@ def run_test(source_code, json_questions, problem_id):
         "time_execution": None,
         "time_limit": None,
         "percentage": None,
-        "actual_output": None,
+        "actual_output": [],
         "output_expected": None,
         "base_code": None,
         "answer": None
@@ -118,7 +124,7 @@ def run_test(source_code, json_questions, problem_id):
             end_time = time.time()
             judge_code["time_execution"] = round(end_time - start_time, 3)
             actual_output = completed_process.stdout.strip()
-            judge_code["actual_output"] = actual_output
+            judge_code["actual_output"].append(actual_output)  # Adiciona ao final da lista para manter a ordem da mais antiga para a mais atual
         except subprocess.CalledProcessError as e:
             judge_code["runtime_error"] = f"Erro de execução: {e}"
             judge_code["answer"] = "Runtime error"

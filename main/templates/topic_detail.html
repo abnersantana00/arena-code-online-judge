@@ -25,8 +25,14 @@
             <th>Output Sample</th>
         </tr>
         <tr>
-            <td> </td>
-            <td>Hello Word!!!</td>
+            <td>
+                {% for expected_input in one_question.input_expected %}
+                        {{expected_input}} <br>
+                {% endfor %}
+            </td>
+            <td> {% for expected_output in one_question.output_expected %}
+                        {{expected_output}} <br>
+                {% endfor %} </td>
         </tr>
     </table>
 <br>
