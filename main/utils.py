@@ -62,11 +62,6 @@ def extract_titles(json_file_path):
     titles_info = [{'topic_name': item['topic_name'], 'topic_id': item['topic_id']} for item in data]
     return titles_info
 # Oline Judge Automatized Tests
-import sys
-import subprocess
-import difflib
-import time
-
 def run_test(source_code, json_questions, problem_id):
     judge_code = {
         "runtime_error": None,
@@ -100,108 +95,54 @@ def run_test(source_code, json_questions, problem_id):
     judge_code["base_code"] = problem.get('base_code', None)
     input_data = problem['input_expected']
     output_expected = problem['output_expected']
-    judge_code["output_expected"] = output_expected[0] if output_expected else None
+    judge_code["output_expected"] = output_expected
     judge_code["time_limit"] = int(problem['time_limit'])
 
-    try:
-        # Utilizando o caminho absoluto do executável Python
-        python_executable = sys.executable
-        start_time = time.time()
-        completed_process = subprocess.run(
-            [python_executable, "-c", source_code],
-            input='\n'.join(input_data).encode(),
-            capture_output=True,
-            text=True,
-            timeout=judge_code["time_limit"]
-        )
-        end_time = time.time()
-        judge_code["time_execution"] = round(end_time - start_time, 3)
-        judge_code["actual_output"] = completed_process.stdout.strip()
-    except subprocess.CalledProcessError as e:
-        judge_code["runtime_error"] = f"Erro de execução: {e}"
-        judge_code["answer"] = "Runtime error"
-        return judge_code
-    except subprocess.TimeoutExpired:
-        judge_code["runtime_error"] = "Erro de execução: Tempo limite excedido"
-        judge_code["answer"] = "Runtime error"
-        return judge_code
+    total_tests = len(input_data)
+    passed_tests = 0
 
-    if completed_process.returncode != 0:
-        judge_code["runtime_error"] = completed_process.stderr.strip()
-        judge_code["answer"] = "Runtime error"
-        return judge_code
+    for idx, input_value in enumerate(input_data):
+        if not input_value.strip():
+            continue
 
-    if judge_code["actual_output"] != judge_code["output_expected"]:
-        judge_code["runtime_error"] = "Erro de saída"
-        judge_code["answer"] = "Runtime error"
-        return judge_code
+        try:
+            python_executable = sys.executable
+            start_time = time.time()
+            completed_process = subprocess.run(
+                [python_executable, "-c", source_code],
+                input=input_value,
+                capture_output=True,
+                text=True,
+                timeout=judge_code["time_limit"]
+            )
+            end_time = time.time()
+            judge_code["time_execution"] = round(end_time - start_time, 3)
+            actual_output = completed_process.stdout.strip()
+            judge_code["actual_output"] = actual_output
+        except subprocess.CalledProcessError as e:
+            judge_code["runtime_error"] = f"Erro de execução: {e}"
+            judge_code["answer"] = "Runtime error"
+            return judge_code
+        except subprocess.TimeoutExpired:
+            judge_code["runtime_error"] = "Erro de execução: Tempo limite excedido"
+            judge_code["answer"] = "Runtime error"
+            return judge_code
 
-    judge_code["percentage"] = 100
-    judge_code["answer"] = "Success"
+        if completed_process.returncode != 0:
+            judge_code["runtime_error"] = completed_process.stderr.strip()
+            judge_code["answer"] = "Runtime error"
+            return judge_code
+
+        expected_output = output_expected[idx]
+
+        if actual_output == expected_output:
+            passed_tests += 1
+        else:
+            judge_code["runtime_error"] = f"Erro de saída para entrada '{input_value}' - esperado: '{expected_output}', obtido: '{actual_output}'"
+            judge_code["answer"] = "Runtime error"
+            return judge_code
+
+    judge_code["percentage"] = (passed_tests / total_tests) * 100
+    judge_code["answer"] = "Success" if passed_tests == total_tests else f"Partial Success: {passed_tests}/{total_tests} tests passed"
+
     return judge_code
-
-    similarity = difflib.SequenceMatcher(None, judge_code["actual_output"], judge_code["output_expected"]).ratio()
-    judge_code["percentage"] = int(similarity * 100)
-
-    if 1 <= judge_code["percentage"] <= 99:
-        judge_code["runtime_error"] = f"Resposta errada {judge_code['percentage']}%"
-        judge_code["answer"] = f"wrong answer {judge_code['percentage']}%"
-
-    return judge_code
-
-def run_test_v0(source_code, json_questions, problem_id):
-    if not source_code.strip():
-        return "Erro por não digitar o código em branco"
-
-    problem = None
-    for item in json_questions:
-        if problem_id in [p['problem_id'] for p in item.get('problems', [])]:
-            problem = next(p for p in item['problems'] if p['problem_id'] == problem_id)
-            break
-
-    if problem is None:
-        return "Erro: Problema não encontrado"
-
-    input_data = problem['input_expected']
-    output_expected = problem['output_expected']
-
-    try:
-        # Utilizando o caminho absoluto do executável Python
-        python_executable = sys.executable
-        completed_process = subprocess.run(
-            [python_executable, "-c", source_code],
-            input='\n'.join(input_data).encode(),
-            capture_output=True,
-            text=True,
-            timeout=int(problem['time_limit'])
-        )
-        actual_output = completed_process.stdout.strip().split('\n')
-    except subprocess.CalledProcessError:
-        return "Erro de execução"
-    except subprocess.TimeoutExpired:
-        return "Erro de execução: Tempo limite excedido"
-
-    if completed_process.returncode != 0:
-        error_details = completed_process.stderr.strip()
-        return f" Runtime Error :  {error_details}"
-
-    if len(actual_output) != len(output_expected):
-        return print("Erro de saída", actual_output, output_expected)
-
-    correct_count = 0
-    for actual, expected in zip(actual_output, output_expected):
-        if actual == expected:
-            correct_count += 1
-
-    if correct_count == len(output_expected):
-        return "Sucesso"
-
-    similarity = sum([difflib.SequenceMatcher(None, actual, expected).ratio() for actual, expected in
-                      zip(actual_output, output_expected)]) / len(output_expected)
-    percentage = int(similarity * 100)
-
-    if 1 <= percentage <= 99:
-        return f"Resposta errada {percentage}%"
-
-    return "Erro de saída"
-

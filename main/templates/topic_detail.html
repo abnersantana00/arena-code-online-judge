@@ -36,21 +36,24 @@
 <br>
 
 <section>
-    <h5>Problem: {{one_question.topic_id}} | Question : </h5>
+    <h5>Problem: {{one_question.topic_id}} | Question :  {{one_question.problem_id}}  | Language: Python 3.12.3 </h5>
     <form  method="POST" action="{% url 'source_code' topic=topic topic_name=topic_name problem_id=problem_id  %}">
         {% csrf_token %}
         <textarea name="code_submission"  placeholder="Write your code here..."></textarea>
         <input type="submit" value="Submit Code">
-    </form>{one_question.problem_id}}  | Language: Python 3.12.3
+    </form>
 
 <br><br><br>
 </section>
 
 
-<hr>
+<hr> <br><br><br><br><br><br>
+<h4>One Question JSON :</h4>
 {{one_question | safe}}
-<h3> All Questions :  </h3>
- {{all_questions }}
+
+<br><br><br>
+<h3> All Questions JSON :  </h3>
+ {{all_questions | safe }}
 
 {% endblock %}
 

@@ -3,7 +3,7 @@
         "problems": [
             {
                 "problem_id": "1201",
-                "title": "title1",
+                "title": " Tabelas de Decisão: Identificando Destinos com DDD",
                 "variable": {
                     "introduction": 0,
                     "context": 0,
@@ -13,20 +13,34 @@
                     "input": 0,
                     "output": 0
                 },
-                "input": [
-                    "1",
-                    "2"
+                "input_expected": [
+                    "61",
+                    "71",
+                    "11",
+                    "31",
+                    "84",
+                    "85",
+                    "81",
+                    "12"
                 ],
                 "output_expected": [
-                    "1",
-                    "2"
+                    "Brasilia",
+                    "Salvador",
+                    "São Paulo",
+                    "Belo Horizonte",
+                    "Rio Grande do Norte",
+                    "Ceará",
+                    "Pernambuco",
+                    "Valor não cadastrado"
                 ],
-                "timelimit": "10",
-                "memory_limit": "20"
+                "time_limit": "1000",
+                "memory_limit": "20",
+                "file_size_max" : "1000",
+                "base_code" : "ddd = int(input(\\\"Digite o DDD: \\\"))\\n\\n# Utilize estruturas de decisão para verificar o DDD e imprimir o destino\\nif ddd == 61:\\n    print(\\\"Brasilia\\\")\\nelif ddd == 71:\\n    print(\\\"Salvador\\\")\\nelif ddd == 11:\\n    print(\\\"São Paulo\\\")\\nelif ddd == 31:\\n    print(\\\"Belo Horizonte\\\")\\nelif ddd == 84:\\n    print(\\\"Rio Grande do Norte\\\")\\nelif ddd == 85:\\n    print(\\\"Ceará\\\")\\nelif ddd == 81:\\n    print(\\\"Pernambuco\\\")\\nelse:\\n    print(\\\"Valor não cadastrado\\\")"
             },
             {
                 "problem_id": "1202",
-                "title": "title1",
+                "title": "Calculando Imposto de Renda",
                 "variable": {
                     "introduction": 0,
                     "context": 1,
@@ -39,7 +53,7 @@
             },
             {
                 "problem_id": "1203",
-                "title": "title1",
+                "title": "Criando um Relógio Astronômico para Programadores",
                 "variable": {
                     "introduction": 2,
                     "context": 2,
@@ -52,7 +66,7 @@
             },
             {
                 "problem_id": "00104",
-                "title": "title1",
+                "title": "Classificação de Triângulos com Estruturas de Decisão",
                 "variable": {
                     "introduction": 1,
                     "context": 3,
@@ -65,7 +79,7 @@
             },
             {
                 "problem_id": "00105",
-                "title": "title1",
+                "title": "Cálculo de Salário Líquido com Desconto INSS e Benefícios Adicionais",
                 "variable": {
                     "introduction": 2,
                     "context": 4,
@@ -101,7 +115,7 @@
             },
             {
                 "problem_id": "00106",
-                "title": "title1",
+                "title": "Calculadora de Imposto de Renda com Dedução",
                 "variable": {
                     "introduction": 3,
                     "context": 1,

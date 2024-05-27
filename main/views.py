@@ -34,7 +34,7 @@ def topic_detail(request, topic, topic_name):
         json_questions = json.load(file)
 
     all_questions = generate_all_questions(json_template,json_questions )
-    one_question = generate_one_question(json_template, json_questions, "102024")
+    one_question = generate_one_question(json_template, json_questions)
     problem_id = one_question['problem_id']
 
     context = {
@@ -57,7 +57,7 @@ def source_code(request, topic, topic_name, problem_id):
         file2 = f'main/static/json-files/questions/{topic}-questions.json'
         with open(file2, 'r', encoding='utf-8') as file:
             json_questions = json.load(file)
-
+        print("Code submission:", code_submission, type(code_submission))
         result = run_test(code_submission, json_questions,problem_id)
         print("RESULTADO DO JUIZ :", result)
 
