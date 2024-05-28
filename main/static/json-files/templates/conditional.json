@@ -35,7 +35,7 @@
         "<br><br> <table border=\"1\" >\n  <tr>\n    <th>Base de Cálculo</th>\n    <th>Alíquota</th>\n  </tr>\n  <tr>\n    <td>Até R$ 2.259,20</td>\n    <td>(insento)</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.259,20 até R$ 2.826,65</td>\n    <td>7,5%</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.826,66 até R$ 3.751,05</td>\n    <td>15%</td>\n  </tr>\n  <tr>\n    <td>De R$ 3.751,06 até R$ 4.664,68</td>\n    <td>22%</td>\n  </tr>\n  <tr>\n    <td>Acima de R$ 4.664,68</td>\n    <td>27,5%</td>\n  </tr>\n</table>\n <br><br>",
         "<br><br><br><img src=\"/static/json-files/img/conditional/the-change.webp\" alt=\"Imagem\"><br><br><br>",
         "<br><br> <table border=\"1\" >\n  <tr>\n    <th>Condição</th>\n    <th>Classificação</th>\n  </tr>\n  <tr>\n    <td>A ≥ B + C</td>\n    <td>NAO FORMA TRIANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 = B^2 + C^2</td>\n    <td>TRIANGULO RETANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 > B^2 + C^2</td>\n    <td>TRIANGULO OBTUSANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 < B^2 + C^2</td>\n    <td>TRIANGULO ACUTANGULO </td>\n  </tr>\n  <tr>\n    <td>A = B = C</td>\n    <td>TRIANGULO EQUILATERO </td>\n  </tr>\n  <tr>\n    <td>(A = B ≠ C) or (A = C ≠ B) or (B = C ≠ A)</td>\n    <td>TRIANGULO ISOSCELES </td>\n  </tr>\n</table>\n <br><br>",
-        "<br><br> <tableborder=\"1\" >\n  <tr>\n    <th>Salário</th>\n    <th>Alíquota (INSS)</th>\n  </tr>\n  <tr>\n    <td>Até R$ 1.412,00</td>\n    <td>7,5%</td>\n  </tr>\n  <tr>\n    <td>De R$ 1.412,01 até R$ 2.666,68</td>\n    <td>9,0%</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.666,69 até R$ 4.000,03</td>\n    <td>12%</td>\n  </tr>\n  <tr>\n    <td>De R$ 4.000,04 até R$ 7.786,02</td>\n    <td>14% </td>\n  </tr>\n</table>\n <br><br>",
+        "<br><br> <table border=\"1\" >\n  <tr>\n    <th>Salário</th>\n    <th>Alíquota (INSS)</th>\n  </tr>\n  <tr>\n    <td>Até R$ 1.412,00</td>\n    <td>7,5%</td>\n  </tr>\n  <tr>\n    <td>De R$ 1.412,01 até R$ 2.666,68</td>\n    <td>9,0%</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.666,69 até R$ 4.000,03</td>\n    <td>12%</td>\n  </tr>\n  <tr>\n    <td>De R$ 4.000,04 até R$ 7.786,02</td>\n    <td>14% </td>\n  </tr>\n</table>\n <br><br>",
         " "
 ],
       "solicitation": [
@@ -56,7 +56,8 @@
         "<br><br><strong>Entrada: </strong><br> A entrada contém um número inteiro M (0 <= M <= 360), Como a posição muda constantemente, o seu programa receberá vários casos de teste.",
         "<br><br><strong>Entrada: </strong><br> Os valores de entrada contém três números decimais, A, B e C (0< A, B, C).",
         "<br><br><strong>Entrada: </strong><br> Três valores de entrada, o primeiro é uma string, o segundo é um valor do salário com dois dígitos após o ponto decimal, e o terceiro é um valor inteiro maior ou igual a zero.",
-        "<br><br><strong>Entrada: </strong><br> Este problema não possui entrada."
+        "<br><br><strong>Entrada: </strong><br> Este problema não possui entrada.",
+        "<br><br><strong>Entrada: </strong><br> A entrada consiste em um número de ponto flutuante, com 1 dígitos após o ponto decimal. "
       ],
       "output": [
         "<br><br><strong>Saída: </strong><br> Imprima exatamente o nome correspondente como está descrito na segunda coluna. Imprima \"Valor não cadastrado\" se não existir um valor correspondente ao número digitado.",
@@ -65,8 +66,8 @@
         "<br><br><strong>Saída: </strong><br> A saída deve imprimir todas as classificações do triângulo apresentado na entrada, conforme a tabela de comparação.",
         "<br><br><strong>Saída: </strong><br> Imprima o nome do funcionário, e o salário liquido",
         "<br><br><strong>Saída: </strong><br> Imprima o valor de imposto devido e na linha seguinte o valor de imposto após as deduções",
-        "<br><br><strong>Saída: </strong><br> Você deve imprimir a mensagem \"Hello World!\" e depois a quebra de linha, conforme mostrado. "
-
+        "<br><br><strong>Saída: </strong><br> Você deve imprimir a mensagem \"Hello World!\" e depois a quebra de linha, conforme mostrado. ",
+        "<br><br><strong>Saída: </strong><br> Imprima exatamente o nome correspondente como está descrito na segunda coluna."
       ]
     }
   },

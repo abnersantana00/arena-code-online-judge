@@ -25,15 +25,17 @@
             <th>Output Sample</th>
         </tr>
         <tr>
-            <td>
-                {% for expected_input in one_question.input_expected %}
-                        {{expected_input}} <br>
-                {% endfor %}
-            </td>
-            <td> {% for expected_output in one_question.output_expected %}
-                        {{expected_output}} <br>
-                {% endfor %} </td>
-        </tr>
+        <td>
+            {% for expected_input in one_question.input_expected|slice:":3"%}
+                {{ expected_input }} <br>
+            {% endfor %}
+        </td>
+        <td>
+            {% for expected_output in one_question.output_expected|slice:":3" %}
+                {{ expected_output }} <br>
+            {% endfor %}
+        </td>
+    </tr>
     </table>
 <br>
 <a href="">Outro Problema</a>

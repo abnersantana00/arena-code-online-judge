@@ -51,29 +51,23 @@
                     "output": 0
                 },
                 "input_expected": [
-                    "61",
-                    "71",
-                    "11",
-                    "31",
-                    "84",
-                    "85",
-                    "81",
-                    "12"
+                   "2259.20",
+                   "2826.65",
+                   "3751.05",
+                    "4664.68",
+                    "5000.00"
                 ],
                 "output_expected": [
-                    "Brasilia",
-                    "Salvador",
-                    "São Paulo",
-                    "Belo Horizonte",
-                    "Rio Grande do Norte",
-                    "Ceará",
-                    "Pernambuco",
-                    "Valor não cadastrado"
+                    "Imposto: 0.00",
+                    "Imposto: 212.00",
+                    "Imposto: 562.66",
+                    "Imposto: 1026.23",
+                    "Imposto: 1375.00"
                 ],
                 "time_limit": "1000",
                 "memory_limit": "20",
                 "file_size_max" : "1000",
-                "base_code" : ""
+                "base_code" : "# Entrada: um único número real representando o salário mensal\nsalario_mensal = float(input())\n\n# Inicializa a variável do imposto\nimposto = 0.0\n\n# Tabela de decisão para calcular o imposto de renda\nif salario_mensal <= 2259.20:\n    imposto = 0.0\nelif salario_mensal <= 2826.65:\n    imposto = salario_mensal * 0.075\nelif salario_mensal <= 3751.05:\n    imposto = salario_mensal * 0.15\nelif salario_mensal <= 4664.68:\n    imposto = salario_mensal * 0.22\nelse:\n    imposto = salario_mensal * 0.275\n\n# Imprime o valor do imposto com 2 casas decimais\nprint(f\"Imposto: {Imposto:.2f}\")"
             },
             {
                 "problem_id": "1203",
@@ -86,7 +80,17 @@
                     "solicitation": 5,
                     "input": 0,
                     "output": 0
-                }
+                },
+                "input_expected": [
+                    ""
+                ],
+                "output_expected": [
+                    ""
+                ],
+                "time_limit": "100",
+                "memory_limit": "20",
+                "file_size_max" : "100",
+                "base_code" : ""
             },
             {
                 "problem_id": "00104",
@@ -97,10 +101,35 @@
                     "problem": 3,
                     "table_comparison": 3,
                     "solicitation": 6,
-                    "input": 0,
-                    "output": 0
-                }
+                    "input": 6,
+                    "output": 7
+                },
+                "input_expected": [
+                       "7.0 3.0 2.0",
+                        "3.0 4.0 5.0",
+                        "7.0 5.0 3.0",
+                        "5.0 4.0 3.0",
+                        "6.0 6.0 6.0",
+                        "5.0 5.0 8.0",
+                        "5.0 7.0 5.0",
+                        "7.0 5.0 5.0"
+                ],
+                "output_expected": [
+                    "NAO FORMA TRIANGULO",
+                    "TRIANGULO RETANGULO",
+                    "TRIANGULO OBTUSANGULO",
+                    "TRIANGULO RETANGULO",
+                    "TRIANGULO EQUILATERO",
+                    "TRIANGULO ISOSCELES",
+                    "TRIANGULO ISOSCELES",
+                    "TRIANGULO ISOSCELES"
+                ],
+                "time_limit": "100",
+                "memory_limit": "20",
+                "file_size_max" : "100",
+                "base_code" : "# Entrada dos lados do triângulo\na, b, c = map(float, input().split())\n\n# Ordena os lados em ordem decrescente\nif a < b:\n    a, b = b, a\nif a < c:\n    a, c = c, a\nif b < c:\n    b, c = c, b\n\n# Verifica e imprime a classificação do triângulo\nif a >= b + c:\n    print(\"NAO FORMA TRIANGULO\")\nelse:\n    if a == b == c:\n        print(\"TRIANGULO EQUILATERO\")\n    elif a == b or a == c or b == c:\n        print(\"TRIANGULO ISOSCELES\")\n    elif a * a == b * b + c * c:\n        print(\"TRIANGULO RETANGULO\")\n    elif a * a > b * b + c * c:\n        print(\"TRIANGULO OBTUSANGULO\")\n    elif a * a < b * b + c * c:\n        print(\"TRIANGULO ACUTANGULO\")"
             },
+
             {
                 "problem_id": "00105",
                 "title": "Cálculo de Salário Líquido com Desconto INSS e Benefícios Adicionais",
@@ -112,7 +141,17 @@
                     "solicitation": 7,
                     "input": 0,
                     "output": 0
-                }
+                },
+                "input_expected": [
+                    ""
+                ],
+                "output_expected": [
+                    ""
+                ],
+                "time_limit": "1000",
+                "memory_limit": "20",
+                "file_size_max" : "1000",
+                "base_code" : ""
             },
             {
                 "problem_id": "102024",
@@ -136,19 +175,6 @@
                 "memory_limit": "20",
                 "file_size_max" : "1000",
                 "base_code" : "print(\"Hello Word\")"
-            },
-            {
-                "problem_id": "00106",
-                "title": "Calculadora de Imposto de Renda com Dedução",
-                "variable": {
-                    "introduction": 3,
-                    "context": 1,
-                    "problem": 5,
-                    "table_comparison": 1,
-                    "solicitation": 8,
-                    "input": 0,
-                    "output": 0
-                }
             }
         ],
         "topic_id": "1101",
