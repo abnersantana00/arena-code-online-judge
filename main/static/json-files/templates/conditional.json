@@ -57,7 +57,8 @@
         "<br><br><strong>Entrada: </strong><br> Os valores de entrada contém três números decimais, A, B e C (0< A, B, C).",
         "<br><br><strong>Entrada: </strong><br> Três valores de entrada, o primeiro é uma string, o segundo é um valor do salário com dois dígitos após o ponto decimal, e o terceiro é um valor inteiro maior ou igual a zero.",
         "<br><br><strong>Entrada: </strong><br> Este problema não possui entrada.",
-        "<br><br><strong>Entrada: </strong><br> A entrada consiste em um número de ponto flutuante, com 1 dígitos após o ponto decimal. "
+        "<br><br><strong>Entrada: </strong><br> A entrada consiste em um número de ponto flutuante, com 1 dígitos após o ponto decimal. ",
+        "<br><br><strong>Entrada: </strong><br> A entrada contém um inteiro M (0 <= M <= 360) que representa o ângulo em graus"
       ],
       "output": [
         "<br><br><strong>Saída: </strong><br> Imprima exatamente o nome correspondente como está descrito na segunda coluna. Imprima \"Valor não cadastrado\" se não existir um valor correspondente ao número digitado.",

@@ -78,19 +78,25 @@
                     "problem": 2,
                     "table_comparison": 2,
                     "solicitation": 5,
-                    "input": 0,
+                    "input": 7,
                     "output": 0
                 },
                 "input_expected": [
-                    ""
+                    "10",
+                    "120",
+                    "200",
+                    "310"
                 ],
                 "output_expected": [
-                    ""
+                    "Bom Dia!!",
+                    "Boa Tarde!!",
+                    "Boa Noite!!",
+                    "De Madrugada!!"
                 ],
                 "time_limit": "100",
                 "memory_limit": "20",
                 "file_size_max" : "100",
-                "base_code" : ""
+                "base_code" : "angle = int(input())\n\nif 0 <= angle < 90:\n    print(\"Bom Dia!!\") \nelif 90 <= angle < 180:\n    print(\"Boa Tarde!!\") \nelif 180 <= angle < 270:\n    print(\"Boa Noite!!\")\nelif 270 <= angle <= 360:\n    print(\"De Madrugada!!\")"
             },
             {
                 "problem_id": "00104",

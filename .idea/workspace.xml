@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/static/json-files/questions/conditional-questions.json" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/json-files/questions/conditional-questions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/static/json-files/templates/conditional.json" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/json-files/templates/conditional.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/topic_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/topic_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +165,7 @@
       <workItem from="1716425149687" duration="104000" />
       <workItem from="1716425421973" duration="43816000" />
       <workItem from="1716566687072" duration="29499000" />
-      <workItem from="1716670082479" duration="47669000" />
+      <workItem from="1716670082479" duration="48373000" />
     </task>
     <servers />
   </component>
