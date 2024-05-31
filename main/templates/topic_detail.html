@@ -2,44 +2,80 @@
 
 {% block content %}
 
-<h3> Topic : {{topic}} </h3>
-<nav>
-    <ol>
-        <li><a href="/">home</a> </li>
-        <li><a href="/{{topic}}">{{topic}}</a></li>
-        <li> <a href="">{{topic_name}}</a></li>
-        <li>submit code</li>
+<div class=" my-2">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+      <li class="breadcrumb-item">
+        <a class="link-body-emphasis" href="\">
+         <i class="bi bi-house-door"></i>
+          <span class="visually-hidden">Home</span>
+        </a>
+      </li>
+        <li class="breadcrumb-item">
+        <a class="link-body-emphasis fw-semibold text-decoration-none" href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a class="link-body-emphasis fw-semibold text-decoration-none" href="/{{topic}}">{{topic}}</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">
+          <a class="link-body-emphasis fw-semibold text-decoration-none" href=""> {{topic_name}} </a>
+      </li>
+        <li class="breadcrumb-item active" aria-current="page">
+        Submit Code
+      </li>
     </ol>
-</nav>
+  </nav>
+</div>
 
-<hr>
 <section>
-<h4> Topic Detail :  </h4>
-<b>{{one_question.title}} </b>
-<h5>Enunciado: </h5>
-{{one_question.stem | safe}}
-<br><br>
-<table border="1">
-        <tr>
-            <th>Input Sample</th>
-            <th>Output Sample</th>
-        </tr>
-        <tr>
-        <td>
-            {% for expected_input in one_question.input_expected|slice:":3"%}
-                {{ expected_input }} <br>
-            {% endfor %}
-        </td>
-        <td>
-            {% for expected_output in one_question.output_expected|slice:":3" %}
-                {{ expected_output }} <br>
-            {% endfor %}
-        </td>
-    </tr>
-    </table>
-<br>
-<a href="">Outro Problema</a>
-<hr>
+
+    <div class="row">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-body">
+                        <b class="fw-bold py-2">{{one_question.title}} </b> <br><br>
+
+                        <p> {{one_question.stem | safe}} </p>
+                        <br><br>
+
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Input Sample</th>
+                                    <th scope="col">Output Sample</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for expected_input, expected_output in expected %}
+                                <tr>
+                                    <td>{{ expected_input }}</td>
+                                    <td>{{ expected_output }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        <div class="col">
+           <div class="card">
+                <div class="card-body">
+                        <h3> Escreva seu código aqui </h3>
+                        <form method="post" action="#">
+                            {% csrf_token %}
+                            <div id="editor">{{ code|default:'' }}</div>
+                            <textarea name="code" id="code" style="display: none;"></textarea>
+                            <button type="submit">Save</button>
+                        </form>
+                </div>
+           </div>
+        </div>
+
+    </div>
+
+
+
 </section>
 <br>
 
@@ -54,14 +90,17 @@
 <br><br><br>
 </section>
 
+<script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/github_dark");
+        editor.session.setMode("ace/mode/python");
 
-<hr> <br><br><br><br><br><br>
-<h4>One Question JSON :</h4>
-{{one_question | safe}}
+        // Sync the ACE Editor content with the textarea before form submission
+        document.querySelector('form').addEventListener('submit', function() {
+            document.getElementById('code').value = editor.getValue();
+        });
+</script>
 
-<br><br><br>
-<h3> All Questions JSON :  </h3>
- {{all_questions | safe }}
 
 {% endblock %}
 

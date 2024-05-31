@@ -2,19 +2,36 @@
 
 {% block content %}
 
-<h3> Topic : {{topic}} </h3>
-<nav>
-    <ol>
-        <li><a href="/">home</a> </li>
-        <li><a href="/{{topic}}">{{topic}}</a></li>
-        <li>topic detail</li>
-        <li>submit code</li>
+<div class=" my-2">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+      <li class="breadcrumb-item">
+        <a class="link-body-emphasis" href="\">
+         <i class="bi bi-house-door"></i>
+          <span class="visually-hidden">Home</span>
+        </a>
+      </li>
+        <li class="breadcrumb-item">
+        <a class="link-body-emphasis fw-semibold text-decoration-none" href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a class="link-body-emphasis fw-semibold text-decoration-none" href="/{{topic}}">{{topic}}</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">
+        Topic Details
+      </li>
+        <li class="breadcrumb-item active" aria-current="page">
+        Submit Code
+      </li>
     </ol>
-</nav>
+  </nav>
+</div>
 
-<h3> Lists Questions :  </h3>
 
-<table border="1">
+
+<h3> Lists Questions  </h3>
+
+<table class="table table-striped table-hover">
     <thead>
         <tr>
             <th>Topics</th>
@@ -24,7 +41,7 @@
     <tbody>
         {% for item in titles_info %}
         <tr>
-            <td><a href="{{item.topic_name}}">{{ item.topic_name }}</a></td>
+            <td><a class="text-decoration-none" href="{{item.topic_name}}">{{ item.topic_name }}</a></td>
             <td>{{ item.topic_id }}</td>
         </tr>
         {% endfor %}

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_protect
 from .utils import extract_titles, generate_all_questions, generate_one_question, run_test
-import json
+import json, random
 def home(request):
     return render(request, 'home.html')
 
@@ -37,12 +37,16 @@ def topic_detail(request, topic, topic_name):
     one_question = generate_one_question(json_template, json_questions)
     problem_id = one_question['problem_id']
 
+    combined_list = list(zip(one_question['input_expected'], one_question['output_expected']))
+    expected = combined_list if len(combined_list) < 3 else random.sample(combined_list, 3)
+
     context = {
         'topic': topic,
         'topic_name': topic_name,
         'all_questions': all_questions,
         'one_question' : one_question,
-        'problem_id' : problem_id
+        'problem_id' : problem_id,
+        'expected' : expected
     }
 
 
