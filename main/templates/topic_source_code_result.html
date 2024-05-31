@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4> SOURCE CODE </h4>
+<hr>
+<p><b>Problem:</b> {{problem_id}} - {{topic_name}}</p>
+<p><b>Answer</b> : {{result.answer}} </p>
+<p><b> Language</b> : Python3 </p>
+<p><b>runtime</b> : {{result.time_execution}}s</p>
+
+<h1>diference</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Your Output</th>
+            <th>Output Expected</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+             {% for output_actual in result.actual_output %}
+                    {{ output_actual }}
+                <br>
+                {% endfor %}
+            </td>
+
+            <td>
+                {% for expected_output in result.output_expected %}
+                    {{ expected_output }}
+                <br>
+                {% endfor %}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Runtime Error:</h4>
+<p> {{result.runtime_error}} </p>
+
+<hr>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Your Code</th>
+            <th>Expected Code Base</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+            {% filter linebreaksbr %}
+                <p> {{code_submission | safe }} </p>
+            {% endfilter %}
+            </td>
+
+            <td>
+            {% filter linebreaksbr %}
+                <p>{{result.base_code | safe}}</p>
+            {% endfilter %}
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+{{result}}
+
+
+{% endblock %}
+
+
+

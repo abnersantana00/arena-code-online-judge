@@ -62,11 +62,11 @@
            <div class="card">
                 <div class="card-body">
                         <h3> Escreva seu código aqui </h3>
-                        <form method="post" action="#">
+                        <form method="post" action="{% url 'source_code' topic=topic topic_name=topic_name problem_id=problem_id  %}">
                             {% csrf_token %}
                             <div id="editor">{{ code|default:'' }}</div>
-                            <textarea name="code" id="code" style="display: none;"></textarea>
-                            <button type="submit">Save</button>
+                            <textarea name="code_submission" id="code_submission" style="display: none;"></textarea>
+                            <button type="submit" class="my-4 btn btn-outline-success">Submit Code</button>
                         </form>
                 </div>
            </div>
@@ -79,16 +79,6 @@
 </section>
 <br>
 
-<section>
-    <h5>Problem: {{one_question.topic_id}} | Question :  {{one_question.problem_id}}  | Language: Python 3.12.3 </h5>
-    <form  method="POST" action="{% url 'source_code' topic=topic topic_name=topic_name problem_id=problem_id  %}">
-        {% csrf_token %}
-        <textarea name="code_submission"  placeholder="Write your code here..."></textarea>
-        <input type="submit" value="Submit Code">
-    </form>
-
-<br><br><br>
-</section>
 
 <script>
         var editor = ace.edit("editor");
@@ -97,7 +87,7 @@
 
         // Sync the ACE Editor content with the textarea before form submission
         document.querySelector('form').addEventListener('submit', function() {
-            document.getElementById('code').value = editor.getValue();
+            document.getElementById('code_submission').value = editor.getValue();
         });
 </script>
 
