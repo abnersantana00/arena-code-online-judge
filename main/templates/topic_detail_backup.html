@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class=" my-2">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+      <li class="breadcrumb-item">
+        <a class="link-body-emphasis" href="\">
+         <i class="bi bi-house-door"></i>
+          <span class="visually-hidden">Home</span>
+        </a>
+      </li>
+        <li class="breadcrumb-item">
+        <a class="link-body-emphasis fw-semibold text-decoration-none" href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a class="link-body-emphasis fw-semibold text-decoration-none" href="/{{topic}}">{{topic}}</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">
+          <a class="link-body-emphasis fw-semibold text-decoration-none" href=""> {{topic_name}} </a>
+      </li>
+        <li class="breadcrumb-item active" aria-current="page">
+        Submit Code
+      </li>
+    </ol>
+  </nav>
+</div>
+
+<section>
+
+    <div class="row">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-body">
+                        <b class="fw-bold py-2">{{one_question.title}} </b> <br><br>
+
+                        <p> {{one_question.stem | safe}} </p>
+                        <br><br>
+
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Input Sample</th>
+                                    <th scope="col">Output Sample</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for expected_input, expected_output in expected %}
+                                <tr>
+                                    <td>{{ expected_input }}</td>
+                                    <td>{{ expected_output }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        <div class="col">
+           <div class="card">
+                <div class="card-body">
+                        <h3> Escreva seu código aqui </h3>
+                        <form method="post" action="{% url 'source_code' topic=topic topic_name=topic_name problem_id=problem_id  %}">
+                            {% csrf_token %}
+                            <div id="editor">{{ code|default:'' }}</div>
+                            <textarea name="code_submission" id="code_submission" style="display: none;"></textarea>
+                            <button type="submit" class="my-4 btn btn-outline-success">Submit Code</button>
+                        </form>
+                </div>
+           </div>
+        </div>
+
+    </div>
+
+
+
+</section>
+<br>
+
+
+<script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/github_dark");
+        editor.session.setMode("ace/mode/python");
+
+        // Sync the ACE Editor content with the textarea before form submission
+        document.querySelector('form').addEventListener('submit', function() {
+            document.getElementById('code_submission').value = editor.getValue();
+        });
+</script>
+
+
+{% endblock %}
+
+
+
