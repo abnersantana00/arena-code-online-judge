@@ -1,113 +1,188 @@
 [
-  {
-    "topic_name": "conditional-table-comparison",
-    "topic_id": "1101",
-    "stem": " {{introduction}} {{context}} {{problem}} {{table_comparison}} {{solicitation}} {{input}} {{output}} ",
-    "variable": {
-      "introduction": [
-        "Nesta atividade, você vai praticar o uso de estruturas de decisão 'if' e 'else' em uma linguagem de programação. Para tornar este aprendizado mais interativo e estruturado, vamos utilizar tabelas de decisão.",
-        "Uma estrutura de decisão é uma maneira organizada de apresentar todos os possíveis cenários e as ações correspondentes que seu programa deve tomar.",
-        "Seu objetivo é criar um programa que tome decisões com base em critérios específicos fornecidos. Vamos usar uma situação real onde várias condições podem influenciar a saída do programa.",
-        "As estruturas de decisão são frequentemente utilizadas em situações de mundo real onde decisões precisam ser tomadas de forma rápida e consistente.",
-        "Implementar e entender estruturas condicionais, você estará se preparando para enfrentar problemas complexos em áreas que vão desde o desenvolvimento de software até a análise de dados.",
-        "Cada cenário em uma tabela de decisão representa um problema único a ser solucionado, e identificar a solução mais eficaz requer que você pense de forma estruturada sobre as possíveis consequências de cada escolha.",
-        "  "
-      ],
-      "context": [
-        "Dominar as condições de decisão não apenas ajuda você a controlar o fluxo do seu programa, mas também o prepara para escrever códigos mais complexos e eficientes. ",
-        "No Brasil, os cidadões estão muito contetentes em cumprir com seus impostos, pois confiam na integridade política e no uso adequado dos recursos em benefício da população, sem desvios. A moeda nacional é Real representado pelo símbolo R$.",
-        "Júlio está criando um novo SmartWatch, especialmente para programadores. É incrível as vantagens que ele oferece e o conforte que ele tem para programar. O relógio ainda estava em desenvolvimento e ele prometeu consertar os bugs e colocar equipamentos melhores.",
-        "A classificação de triângulos é uma questão fundamental em geometria. Dependendo das medidas de seus lados, um triângulo pode ser classificado de diversas maneiras, que tem implicações importantes tanto na teoria quanto em aplicações práticas. Triângulos são figuras geométricas delimitadas por três retas que intersectam em três pontos não colineares, formando três ângulos internos.",
-        "Você é um desenvolvedor de software encarregador de criar um sistema para auxliar no cálculo de salários de uma empresa, sua tarefa é calcular descontos e beneficios adicionais para o departamento de recursos humanos.",
-        "  "
-      ],
-      "problem": [
-        "Leia um número inteiro que é o código (DDD) em seguida, imprima o destino conforme a tabela a seguir:",
-        "Você está encarregado de calcular o Imposto de Renda para Pessoa Física, para isso, você precisa receber um valor real com duas casas decimais, representado o salário mensal desse cidadão.",
-        "Você está encarregado de projetar um relógio que, em vez de exibir as horas e minutos, mostra a inclinação do Sol/Lua em relação à Terra, variando de 0 a 360 graus. A posição 0º corresponde o nascer do sol, e 270º é a meia-noite. ",
-        "A classificação de um trîangulo pode ser feita com base na medida de seus lados e ângulos, identificando características específicas que ajudam na resolução de problemas geométricos e na compreensão de propriedades especiais. Dado três números representando os lados ded um triângulo, é necessário ordená-los em ordem decrescente e dedterminar o tipo de triângulo que eles formam, seguindo critérioes especificos de classificação baseado nas relações entre os comprimento dos lados.",
-        "Baseado nestas informações desenvolva um programa que leia o salário bruto do funcionário, a quantidade de dependentes que ele possui, e calcule o salário liquido considerando o desconto do INSS e os benefíciso adicionais.",
-        "Gastos com despesas médicas particulares podem ser deduzidas com o intuito do contribuinte ter um desconto na base de cálculo. Analise a tabela de imposto de renda abaixo, calcule o valor devivo para todos os limites estabelecidos considerando algumas despesas médicas sinificativas de tal maneira que seja reduzido o montate tributável ",
-        " Seu primeiro programa em qualquer linguagem de programação geralmente é \"Hello World!\". Neste primeiro problema, tudo o que você precisa fazer é imprimir esta mensagem na tela."
-      ],
-      "table_comparison": [
-        "<br><br>  <table class=\"table table-hover\" >\n  <tr>\n    <th>DDD</th>\n    <th>Destino</th>\n  </tr>\n  <tr>\n    <td>61</td>\n    <td>Brasilia</td>\n  </tr>\n  <tr>\n    <td>71</td>\n    <td>Salvador</td>\n  </tr>\n  <tr>\n    <td>11</td>\n    <td>São Paulo</td>\n  </tr>\n  <tr>\n    <td>31</td>\n    <td>Belo Horizonte</td>\n  </tr>\n  <tr>\n    <td>84</td>\n    <td>Rio Grande do Norte</td>\n  </tr>\n  <tr>\n    <td>85</td>\n    <td>Ceará</td>\n  </tr>\n  <tr>\n    <td>81</td>\n    <td>Pernambuco</td>\n  </tr>\n</table>\n<br><br>",
-        "<br><br> <table class=\"table table-hover\" >\n  <tr>\n    <th>Base de Cálculo</th>\n    <th>Alíquota</th>\n  </tr>\n  <tr>\n    <td>Até R$ 2.259,20</td>\n    <td>(insento)</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.259,20 até R$ 2.826,65</td>\n    <td>7,5%</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.826,66 até R$ 3.751,05</td>\n    <td>15%</td>\n  </tr>\n  <tr>\n    <td>De R$ 3.751,06 até R$ 4.664,68</td>\n    <td>22%</td>\n  </tr>\n  <tr>\n    <td>Acima de R$ 4.664,68</td>\n    <td>27,5%</td>\n  </tr>\n</table>\n <br><br>",
-        "<br><br><br><img src=\"/static/json-files/img/conditional/the-change.webp\" alt=\"Imagem\"><br><br><br>",
-        "<br><br> <table class=\"table table-hover\" >\n  <tr>\n    <th>Condição</th>\n    <th>Classificação</th>\n  </tr>\n  <tr>\n    <td>A ≥ B + C</td>\n    <td>NAO FORMA TRIANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 = B^2 + C^2</td>\n    <td>TRIANGULO RETANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 > B^2 + C^2</td>\n    <td>TRIANGULO OBTUSANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 < B^2 + C^2</td>\n    <td>TRIANGULO ACUTANGULO </td>\n  </tr>\n  <tr>\n    <td>A = B = C</td>\n    <td>TRIANGULO EQUILATERO </td>\n  </tr>\n  <tr>\n    <td>(A = B ≠ C) or (A = C ≠ B) or (B = C ≠ A)</td>\n    <td>TRIANGULO ISOSCELES </td>\n  </tr>\n</table>\n <br><br>",
-        "<br><br> <table class=\"table table-hover\" >\n  <tr>\n    <th>Salário</th>\n    <th>Alíquota (INSS)</th>\n  </tr>\n  <tr>\n    <td>Até R$ 1.412,00</td>\n    <td>7,5%</td>\n  </tr>\n  <tr>\n    <td>De R$ 1.412,01 até R$ 2.666,68</td>\n    <td>9,0%</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.666,69 até R$ 4.000,03</td>\n    <td>12%</td>\n  </tr>\n  <tr>\n    <td>De R$ 4.000,04 até R$ 7.786,02</td>\n    <td>14% </td>\n  </tr>\n</table>\n <br><br>",
-        " "
-],
-      "solicitation": [
-        "Se o número de entrada não for encontrado na tabela acima, a saída deve ser \"Valor não cadastrado\" ",
-        "Leia as condições fornecidas na tabela de decisão e responda o que se pede.",
-        "Implemente uma série de instruções 'if' para cobrir todos os cenários possíveis listados na tabela.",
-        "Certifique-se que seu programa possa receber entradas e produzir saídas conforme esperado pelas condições informadas.",
-        "Calcule e imprima o valor dos impostos a serem pagos, seguindo a tabela de taxas informada, a resposta deve ser impressa com 2 dígitos após a vírgula.",
-        "Se o relógio mostra uma inclinação de 75º graus, em que período estamos? Descreva também qual seria a aparência do céu e atividade provável do sol ou da Lua para outros três pontos sinificativos deste relógio: 0º, 180º e 270º. Esta questão envolve a compreenção da posição relativa do Sol e da Lua em relação à Terra, bem como a interpretação dessa posição em termos de períodos do dia. É uma combinação interessante de astronomia com o conceito de leitura de relógio.",
-        "Escreva um programa com estrutura condicional que leia três números decimais representando os lados de um triângulo, organize esses valores em ordem decrescente, e determine e imprima todas as classificações ao triângulo formado pelos lados fornecidos.",
-        "Solicite o nome do funcionário, o salário bruto e a quantidade de dependentes. Considerando: Salário Líquido = Salário Bruto - Desconto INSS + (R$ 15,00 * Número de Dependentes) + Auxilio Passagem (R$ 250) + Auxilio Refeição (R$ 300).",
-        "Implemente um programa que além de calcular o valor devido baseado na tabela de alíquota, inclua uma dedução de R$ 689,33 por despesas médicas",
-        " "
-      ],
-      "input": [
-        "<br><br><strong>Entrada: </strong><br> A entrada consiste em um único número inteiro.",
-        "<br><br><strong>Entrada: </strong><br> A entrada consiste em um número de ponto flutuante, com 2 dígitos após o ponto decimal. 1 ",
-        "<br><br><strong>Entrada: </strong><br> A entrada contém um número inteiro M (0 <= M <= 360), Como a posição muda constantemente, o seu programa receberá vários casos de teste.",
-        "<br><br><strong>Entrada: </strong><br> Os valores de entrada contém três números decimais, A, B e C (0< A, B, C).",
-        "<br><br><strong>Entrada: </strong><br> Três valores de entrada, o primeiro é uma string, o segundo é um valor do salário com dois dígitos após o ponto decimal, e o terceiro é um valor inteiro maior ou igual a zero.",
-        "<br><br><strong>Entrada: </strong><br> Este problema não possui entrada.",
-        "<br><br><strong>Entrada: </strong><br> A entrada consiste em um número de ponto flutuante, com 1 dígitos após o ponto decimal. ",
-        "<br><br><strong>Entrada: </strong><br> A entrada contém um inteiro M (0 <= M <= 360) que representa o ângulo em graus"
-      ],
-      "output": [
-        "<br><br><strong>Saída: </strong><br> Imprima exatamente o nome correspondente como está descrito na segunda coluna. Imprima \"Valor não cadastrado\" se não existir um valor correspondente ao número digitado.",
-        "<br><br><strong>Saída: </strong><br> Imprima a mensagem \"R$\" seguida de um espaço em branco e o valor total a ser pago com dois dígitos após a vírgula",
-        "<br><br><strong>Saída: </strong><br> Imprima uma saudação para a hora do dia: \"Boa Tarde!\",\"Boa Noite!\"\"Bom Dia!\"\"De Madrugada!\" ",
-        "<br><br><strong>Saída: </strong><br> A saída deve imprimir todas as classificações do triângulo apresentado na entrada, conforme a tabela de comparação.",
-        "<br><br><strong>Saída: </strong><br> Imprima o nome do funcionário, e o salário liquido",
-        "<br><br><strong>Saída: </strong><br> Imprima o valor de imposto devido e na linha seguinte o valor de imposto após as deduções",
-        "<br><br><strong>Saída: </strong><br> Você deve imprimir a mensagem \"Hello World!\" e depois a quebra de linha, conforme mostrado. ",
-        "<br><br><strong>Saída: </strong><br> Imprima exatamente o nome correspondente como está descrito na segunda coluna."
-      ]
-    }
-  },
-  {
-    "topic_name": "conditional-aligned",
-    "topic_id": "10102",
-    "stem": "Base da estrutura 2 {var} {{{context2}}}",
-    "variable": {
-        "var": [
-            "var1",
-            "var1",
-            "var2"
-        ]
-    },
-    "context2": {
-        "stem": "context 2 lorem impsum {{var3}}",
-        "var3": [
-            "context2",
-            "context3",
-            "context5"
-        ]
-    }
-  },
-  {
-      "topic_name": "conditional-miscellaneous",
-      "topic_id": "10103",
-        "stem": "Base da estrutura 3",
-        "variable": {
-            "var1": "valorX",
-            "var2": "valorY"
-        }
-    },
-  {
-      "topic_name": "example-structure",
-      "topic_id": "10103",
-        "stem": "Base da estrutura 3",
-        "variable": {
-            "var1": "valorX",
-            "var2": "valorY"
-        }
-    }
+	{
+		"topic_name": "conditional-table-comparison",
+		"topic_id": "1101",
+		"stem": " {{introduction}} {{context}} {{problem}} {{table_comparison}} {{solicitation}} {{input}} {{output}} ",
+		"variable": {
+			"introduction": [
+				"Nesta atividade, você vai praticar o uso de estruturas de decisão 'if' e 'else' em uma linguagem de programação. Para tornar este aprendizado mais interativo e estruturado, vamos utilizar tabelas de decisão.",
+				"Uma estrutura de decisão é uma maneira organizada de apresentar todos os possíveis cenários e as ações correspondentes que seu programa deve tomar.",
+				"Seu objetivo é criar um programa que tome decisões com base em critérios específicos fornecidos. Vamos usar uma situação real onde várias condições podem influenciar a saída do programa.",
+				"As estruturas de decisão são frequentemente utilizadas em situações de mundo real onde decisões precisam ser tomadas de forma rápida e consistente.",
+				"Implementar e entender estruturas condicionais, você estará se preparando para enfrentar problemas complexos em áreas que vão desde o desenvolvimento de software até a análise de dados.",
+				"Cada cenário em uma tabela de decisão representa um problema único a ser solucionado, e identificar a solução mais eficaz requer que você pense de forma estruturada sobre as possíveis consequências de cada escolha.",
+				"  "
+			],
+			"context": [
+				"Dominar as condições de decisão não apenas ajuda você a controlar o fluxo do seu programa, mas também o prepara para escrever códigos mais complexos e eficientes. ",
+				"No Brasil, os cidadões estão muito contetentes em cumprir com seus impostos, pois confiam na integridade política e no uso adequado dos recursos em benefício da população, sem desvios. A moeda nacional é Real representado pelo símbolo R$.",
+				"Júlio está criando um novo SmartWatch, especialmente para programadores. É incrível as vantagens que ele oferece e o conforte que ele tem para programar. O relógio ainda estava em desenvolvimento e ele prometeu consertar os bugs e colocar equipamentos melhores.",
+				"A classificação de triângulos é uma questão fundamental em geometria. Dependendo das medidas de seus lados, um triângulo pode ser classificado de diversas maneiras, que tem implicações importantes tanto na teoria quanto em aplicações práticas. Triângulos são figuras geométricas delimitadas por três retas que intersectam em três pontos não colineares, formando três ângulos internos.",
+				"Você é um desenvolvedor de software encarregador de criar um sistema para auxliar no cálculo de salários de uma empresa, sua tarefa é calcular descontos e beneficios adicionais para o departamento de recursos humanos.",
+				"  "
+			],
+			"problem": [
+				"Leia um número inteiro que é o código (DDD) em seguida, imprima o destino conforme a tabela a seguir:",
+				"Você está encarregado de calcular o Imposto de Renda para Pessoa Física, para isso, você precisa receber um valor real com duas casas decimais, representado o salário mensal desse cidadão.",
+				"Você está encarregado de projetar um relógio que, em vez de exibir as horas e minutos, mostra a inclinação do Sol/Lua em relação à Terra, variando de 0 a 360 graus. A posição 0º corresponde o nascer do sol, e 270º é a meia-noite. ",
+				"A classificação de um trîangulo pode ser feita com base na medida de seus lados e ângulos, identificando características específicas que ajudam na resolução de problemas geométricos e na compreensão de propriedades especiais. Dado três números representando os lados ded um triângulo, é necessário ordená-los em ordem decrescente e dedterminar o tipo de triângulo que eles formam, seguindo critérioes especificos de classificação baseado nas relações entre os comprimento dos lados.",
+				"Baseado nestas informações desenvolva um programa que leia o salário bruto do funcionário, a quantidade de dependentes que ele possui, e calcule o salário liquido considerando o desconto do INSS e os benefíciso adicionais.",
+				"Gastos com despesas médicas particulares podem ser deduzidas com o intuito do contribuinte ter um desconto na base de cálculo. Analise a tabela de imposto de renda abaixo, calcule o valor devivo para todos os limites estabelecidos considerando algumas despesas médicas sinificativas de tal maneira que seja reduzido o montate tributável ",
+				" Seu primeiro programa em qualquer linguagem de programação geralmente é \"Hello World!\". Neste primeiro problema, tudo o que você precisa fazer é imprimir esta mensagem na tela."
+			],
+			"table_comparison": [
+				"<br><br>  <table class=\"table table-hover\" >\n  <tr>\n    <th>DDD</th>\n    <th>Destino</th>\n  </tr>\n  <tr>\n    <td>61</td>\n    <td>Brasilia</td>\n  </tr>\n  <tr>\n    <td>71</td>\n    <td>Salvador</td>\n  </tr>\n  <tr>\n    <td>11</td>\n    <td>São Paulo</td>\n  </tr>\n  <tr>\n    <td>31</td>\n    <td>Belo Horizonte</td>\n  </tr>\n  <tr>\n    <td>84</td>\n    <td>Rio Grande do Norte</td>\n  </tr>\n  <tr>\n    <td>85</td>\n    <td>Ceará</td>\n  </tr>\n  <tr>\n    <td>81</td>\n    <td>Pernambuco</td>\n  </tr>\n</table>\n<br><br>",
+				"<br><br> <table class=\"table table-hover\" >\n  <tr>\n    <th>Base de Cálculo</th>\n    <th>Alíquota</th>\n  </tr>\n  <tr>\n    <td>Até R$ 2.259,20</td>\n    <td>(insento)</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.259,20 até R$ 2.826,65</td>\n    <td>7,5%</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.826,66 até R$ 3.751,05</td>\n    <td>15%</td>\n  </tr>\n  <tr>\n    <td>De R$ 3.751,06 até R$ 4.664,68</td>\n    <td>22%</td>\n  </tr>\n  <tr>\n    <td>Acima de R$ 4.664,68</td>\n    <td>27,5%</td>\n  </tr>\n</table>\n <br><br>",
+				"<br><br><br><img src=\"/static/json-files/img/conditional/the-change.webp\" alt=\"Imagem\"><br><br><br>",
+				"<br><br> <table class=\"table table-hover\" >\n  <tr>\n    <th>Condição</th>\n    <th>Classificação</th>\n  </tr>\n  <tr>\n    <td>A ≥ B + C</td>\n    <td>NAO FORMA TRIANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 = B^2 + C^2</td>\n    <td>TRIANGULO RETANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 > B^2 + C^2</td>\n    <td>TRIANGULO OBTUSANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 < B^2 + C^2</td>\n    <td>TRIANGULO ACUTANGULO </td>\n  </tr>\n  <tr>\n    <td>A = B = C</td>\n    <td>TRIANGULO EQUILATERO </td>\n  </tr>\n  <tr>\n    <td>(A = B ≠ C) or (A = C ≠ B) or (B = C ≠ A)</td>\n    <td>TRIANGULO ISOSCELES </td>\n  </tr>\n</table>\n <br><br>",
+				"<br><br> <table class=\"table table-hover\" >\n  <tr>\n    <th>Salário</th>\n    <th>Alíquota (INSS)</th>\n  </tr>\n  <tr>\n    <td>Até R$ 1.412,00</td>\n    <td>7,5%</td>\n  </tr>\n  <tr>\n    <td>De R$ 1.412,01 até R$ 2.666,68</td>\n    <td>9,0%</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.666,69 até R$ 4.000,03</td>\n    <td>12%</td>\n  </tr>\n  <tr>\n    <td>De R$ 4.000,04 até R$ 7.786,02</td>\n    <td>14% </td>\n  </tr>\n</table>\n <br><br>",
+				" "
+			],
+			"solicitation": [
+				"Se o número de entrada não for encontrado na tabela acima, a saída deve ser \"Valor não cadastrado\" ",
+				"Leia as condições fornecidas na tabela de decisão e responda o que se pede.",
+				"Implemente uma série de instruções 'if' para cobrir todos os cenários possíveis listados na tabela.",
+				"Certifique-se que seu programa possa receber entradas e produzir saídas conforme esperado pelas condições informadas.",
+				"Calcule e imprima o valor dos impostos a serem pagos, seguindo a tabela de taxas informada, a resposta deve ser impressa com 2 dígitos após a vírgula.",
+				"Se o relógio mostra uma inclinação de 75º graus, em que período estamos? Descreva também qual seria a aparência do céu e atividade provável do sol ou da Lua para outros três pontos sinificativos deste relógio: 0º, 180º e 270º. Esta questão envolve a compreenção da posição relativa do Sol e da Lua em relação à Terra, bem como a interpretação dessa posição em termos de períodos do dia. É uma combinação interessante de astronomia com o conceito de leitura de relógio.",
+				"Escreva um programa com estrutura condicional que leia três números decimais representando os lados de um triângulo, organize esses valores em ordem decrescente, e determine e imprima todas as classificações ao triângulo formado pelos lados fornecidos.",
+				"Solicite o nome do funcionário, o salário bruto e a quantidade de dependentes. Considerando: Salário Líquido = Salário Bruto - Desconto INSS + (R$ 15,00 * Número de Dependentes) + Auxilio Passagem (R$ 250) + Auxilio Refeição (R$ 300).",
+				"Implemente um programa que além de calcular o valor devido baseado na tabela de alíquota, inclua uma dedução de R$ 689,33 por despesas médicas",
+				" "
+			],
+			"input": [
+				"<br><br><strong>Entrada: </strong><br> A entrada consiste em um único número inteiro.",
+				"<br><br><strong>Entrada: </strong><br> A entrada consiste em um número de ponto flutuante, com 2 dígitos após o ponto decimal. 1 ",
+				"<br><br><strong>Entrada: </strong><br> A entrada contém um número inteiro M (0 <= M <= 360), Como a posição muda constantemente, o seu programa receberá vários casos de teste.",
+				"<br><br><strong>Entrada: </strong><br> Os valores de entrada contém três números decimais, A, B e C (0< A, B, C).",
+				"<br><br><strong>Entrada: </strong><br> Três valores de entrada, o primeiro é uma string, o segundo é um valor do salário com dois dígitos após o ponto decimal, e o terceiro é um valor inteiro maior ou igual a zero.",
+				"<br><br><strong>Entrada: </strong><br> Este problema não possui entrada.",
+				"<br><br><strong>Entrada: </strong><br> A entrada consiste em um número de ponto flutuante, com 1 dígitos após o ponto decimal. ",
+				"<br><br><strong>Entrada: </strong><br> A entrada contém um inteiro M (0 <= M <= 360) que representa o ângulo em graus"
+			],
+			"output": [
+				"<br><br><strong>Saída: </strong><br> Imprima exatamente o nome correspondente como está descrito na segunda coluna. Imprima \"Valor não cadastrado\" se não existir um valor correspondente ao número digitado.",
+				"<br><br><strong>Saída: </strong><br> Imprima a mensagem \"R$\" seguida de um espaço em branco e o valor total a ser pago com dois dígitos após a vírgula",
+				"<br><br><strong>Saída: </strong><br> Imprima uma saudação para a hora do dia: \"Boa Tarde!\",\"Boa Noite!\"\"Bom Dia!\"\"De Madrugada!\" ",
+				"<br><br><strong>Saída: </strong><br> A saída deve imprimir todas as classificações do triângulo apresentado na entrada, conforme a tabela de comparação.",
+				"<br><br><strong>Saída: </strong><br> Imprima o nome do funcionário, e o salário liquido",
+				"<br><br><strong>Saída: </strong><br> Imprima o valor de imposto devido e na linha seguinte o valor de imposto após as deduções",
+				"<br><br><strong>Saída: </strong><br> Você deve imprimir a mensagem \"Hello World!\" e depois a quebra de linha, conforme mostrado. ",
+				"<br><br><strong>Saída: </strong><br> Imprima exatamente o nome correspondente como está descrito na segunda coluna."
+			]
+		}
+	},
+	
+	
+	{
+		"topic_name": "conditional-table-comparison",
+		"topic_id": "1101",
+		"stem": " {{introduction}} {{context}} {{problem}} {{table_comparison}} {{solicitation}} {{input}} {{output}} ",
+		"variable": {
+			"introduction": [
+				"Nesta atividade, você vai praticar o uso de estruturas de decisão 'if' e 'else' em uma linguagem de programação. Para tornar este aprendizado mais interativo e estruturado, vamos utilizar tabelas de decisão.",
+				"Uma estrutura de decisão é uma maneira organizada de apresentar todos os possíveis cenários e as ações correspondentes que seu programa deve tomar.",
+				"Seu objetivo é criar um programa que tome decisões com base em critérios específicos fornecidos. Vamos usar uma situação real onde várias condições podem influenciar a saída do programa.",
+				"As estruturas de decisão são frequentemente utilizadas em situações de mundo real onde decisões precisam ser tomadas de forma rápida e consistente.",
+				"Implementar e entender estruturas condicionais, você estará se preparando para enfrentar problemas complexos em áreas que vão desde o desenvolvimento de software até a análise de dados.",
+				"Cada cenário em uma tabela de decisão representa um problema único a ser solucionado, e identificar a solução mais eficaz requer que você pense de forma estruturada sobre as possíveis consequências de cada escolha.",
+				"  "
+			],
+			"context": [
+				"Dominar as condições de decisão não apenas ajuda você a controlar o fluxo do seu programa, mas também o prepara para escrever códigos mais complexos e eficientes. ",
+				"No Brasil, os cidadões estão muito contetentes em cumprir com seus impostos, pois confiam na integridade política e no uso adequado dos recursos em benefício da população, sem desvios. A moeda nacional é Real representado pelo símbolo R$.",
+				"Júlio está criando um novo SmartWatch, especialmente para programadores. É incrível as vantagens que ele oferece e o conforte que ele tem para programar. O relógio ainda estava em desenvolvimento e ele prometeu consertar os bugs e colocar equipamentos melhores.",
+				"A classificação de triângulos é uma questão fundamental em geometria. Dependendo das medidas de seus lados, um triângulo pode ser classificado de diversas maneiras, que tem implicações importantes tanto na teoria quanto em aplicações práticas. Triângulos são figuras geométricas delimitadas por três retas que intersectam em três pontos não colineares, formando três ângulos internos.",
+				"Você é um desenvolvedor de software encarregador de criar um sistema para auxliar no cálculo de salários de uma empresa, sua tarefa é calcular descontos e beneficios adicionais para o departamento de recursos humanos.",
+				"  "
+			],
+			"problem": [
+				"Leia um número inteiro que é o código (DDD) em seguida, imprima o destino conforme a tabela a seguir:",
+				"Você está encarregado de calcular o Imposto de Renda para Pessoa Física, para isso, você precisa receber um valor real com duas casas decimais, representado o salário mensal desse cidadão.",
+				"Você está encarregado de projetar um relógio que, em vez de exibir as horas e minutos, mostra a inclinação do Sol/Lua em relação à Terra, variando de 0 a 360 graus. A posição 0º corresponde o nascer do sol, e 270º é a meia-noite. ",
+				"A classificação de um trîangulo pode ser feita com base na medida de seus lados e ângulos, identificando características específicas que ajudam na resolução de problemas geométricos e na compreensão de propriedades especiais. Dado três números representando os lados ded um triângulo, é necessário ordená-los em ordem decrescente e dedterminar o tipo de triângulo que eles formam, seguindo critérioes especificos de classificação baseado nas relações entre os comprimento dos lados.",
+				"Baseado nestas informações desenvolva um programa que leia o salário bruto do funcionário, a quantidade de dependentes que ele possui, e calcule o salário liquido considerando o desconto do INSS e os benefíciso adicionais.",
+				"Gastos com despesas médicas particulares podem ser deduzidas com o intuito do contribuinte ter um desconto na base de cálculo. Analise a tabela de imposto de renda abaixo, calcule o valor devivo para todos os limites estabelecidos considerando algumas despesas médicas sinificativas de tal maneira que seja reduzido o montate tributável ",
+				" Seu primeiro programa em qualquer linguagem de programação geralmente é \"Hello World!\". Neste primeiro problema, tudo o que você precisa fazer é imprimir esta mensagem na tela."
+			],
+			"table_comparison": [
+				"<br><br>  <table class=\"table table-hover\" >\n  <tr>\n    <th>DDD</th>\n    <th>Destino</th>\n  </tr>\n  <tr>\n    <td>61</td>\n    <td>Brasilia</td>\n  </tr>\n  <tr>\n    <td>71</td>\n    <td>Salvador</td>\n  </tr>\n  <tr>\n    <td>11</td>\n    <td>São Paulo</td>\n  </tr>\n  <tr>\n    <td>31</td>\n    <td>Belo Horizonte</td>\n  </tr>\n  <tr>\n    <td>84</td>\n    <td>Rio Grande do Norte</td>\n  </tr>\n  <tr>\n    <td>85</td>\n    <td>Ceará</td>\n  </tr>\n  <tr>\n    <td>81</td>\n    <td>Pernambuco</td>\n  </tr>\n</table>\n<br><br>",
+				"<br><br> <table class=\"table table-hover\" >\n  <tr>\n    <th>Base de Cálculo</th>\n    <th>Alíquota</th>\n  </tr>\n  <tr>\n    <td>Até R$ 2.259,20</td>\n    <td>(insento)</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.259,20 até R$ 2.826,65</td>\n    <td>7,5%</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.826,66 até R$ 3.751,05</td>\n    <td>15%</td>\n  </tr>\n  <tr>\n    <td>De R$ 3.751,06 até R$ 4.664,68</td>\n    <td>22%</td>\n  </tr>\n  <tr>\n    <td>Acima de R$ 4.664,68</td>\n    <td>27,5%</td>\n  </tr>\n</table>\n <br><br>",
+				"<br><br><br><img src=\"/static/json-files/img/conditional/the-change.webp\" alt=\"Imagem\"><br><br><br>",
+				"<br><br> <table class=\"table table-hover\" >\n  <tr>\n    <th>Condição</th>\n    <th>Classificação</th>\n  </tr>\n  <tr>\n    <td>A ≥ B + C</td>\n    <td>NAO FORMA TRIANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 = B^2 + C^2</td>\n    <td>TRIANGULO RETANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 > B^2 + C^2</td>\n    <td>TRIANGULO OBTUSANGULO</td>\n  </tr>\n  <tr>\n    <td>A^2 < B^2 + C^2</td>\n    <td>TRIANGULO ACUTANGULO </td>\n  </tr>\n  <tr>\n    <td>A = B = C</td>\n    <td>TRIANGULO EQUILATERO </td>\n  </tr>\n  <tr>\n    <td>(A = B ≠ C) or (A = C ≠ B) or (B = C ≠ A)</td>\n    <td>TRIANGULO ISOSCELES </td>\n  </tr>\n</table>\n <br><br>",
+				"<br><br> <table class=\"table table-hover\" >\n  <tr>\n    <th>Salário</th>\n    <th>Alíquota (INSS)</th>\n  </tr>\n  <tr>\n    <td>Até R$ 1.412,00</td>\n    <td>7,5%</td>\n  </tr>\n  <tr>\n    <td>De R$ 1.412,01 até R$ 2.666,68</td>\n    <td>9,0%</td>\n  </tr>\n  <tr>\n    <td>De R$ 2.666,69 até R$ 4.000,03</td>\n    <td>12%</td>\n  </tr>\n  <tr>\n    <td>De R$ 4.000,04 até R$ 7.786,02</td>\n    <td>14% </td>\n  </tr>\n</table>\n <br><br>",
+				" "
+			],
+			"solicitation": [
+				"Se o número de entrada não for encontrado na tabela acima, a saída deve ser \"Valor não cadastrado\" ",
+				"Leia as condições fornecidas na tabela de decisão e responda o que se pede.",
+				"Implemente uma série de instruções 'if' para cobrir todos os cenários possíveis listados na tabela.",
+				"Certifique-se que seu programa possa receber entradas e produzir saídas conforme esperado pelas condições informadas.",
+				"Calcule e imprima o valor dos impostos a serem pagos, seguindo a tabela de taxas informada, a resposta deve ser impressa com 2 dígitos após a vírgula.",
+				"Se o relógio mostra uma inclinação de 75º graus, em que período estamos? Descreva também qual seria a aparência do céu e atividade provável do sol ou da Lua para outros três pontos sinificativos deste relógio: 0º, 180º e 270º. Esta questão envolve a compreenção da posição relativa do Sol e da Lua em relação à Terra, bem como a interpretação dessa posição em termos de períodos do dia. É uma combinação interessante de astronomia com o conceito de leitura de relógio.",
+				"Escreva um programa com estrutura condicional que leia três números decimais representando os lados de um triângulo, organize esses valores em ordem decrescente, e determine e imprima todas as classificações ao triângulo formado pelos lados fornecidos.",
+				"Solicite o nome do funcionário, o salário bruto e a quantidade de dependentes. Considerando: Salário Líquido = Salário Bruto - Desconto INSS + (R$ 15,00 * Número de Dependentes) + Auxilio Passagem (R$ 250) + Auxilio Refeição (R$ 300).",
+				"Implemente um programa que além de calcular o valor devido baseado na tabela de alíquota, inclua uma dedução de R$ 689,33 por despesas médicas",
+				" "
+			],
+			"input": [
+				"<br><br><strong>Entrada: </strong><br> A entrada consiste em um único número inteiro.",
+				"<br><br><strong>Entrada: </strong><br> A entrada consiste em um número de ponto flutuante, com 2 dígitos após o ponto decimal. 1 ",
+				"<br><br><strong>Entrada: </strong><br> A entrada contém um número inteiro M (0 <= M <= 360), Como a posição muda constantemente, o seu programa receberá vários casos de teste.",
+				"<br><br><strong>Entrada: </strong><br> Os valores de entrada contém três números decimais, A, B e C (0< A, B, C).",
+				"<br><br><strong>Entrada: </strong><br> Três valores de entrada, o primeiro é uma string, o segundo é um valor do salário com dois dígitos após o ponto decimal, e o terceiro é um valor inteiro maior ou igual a zero.",
+				"<br><br><strong>Entrada: </strong><br> Este problema não possui entrada.",
+				"<br><br><strong>Entrada: </strong><br> A entrada consiste em um número de ponto flutuante, com 1 dígitos após o ponto decimal. ",
+				"<br><br><strong>Entrada: </strong><br> A entrada contém um inteiro M (0 <= M <= 360) que representa o ângulo em graus"
+			],
+			"output": [
+				"<br><br><strong>Saída: </strong><br> Imprima exatamente o nome correspondente como está descrito na segunda coluna. Imprima \"Valor não cadastrado\" se não existir um valor correspondente ao número digitado.",
+				"<br><br><strong>Saída: </strong><br> Imprima a mensagem \"R$\" seguida de um espaço em branco e o valor total a ser pago com dois dígitos após a vírgula",
+				"<br><br><strong>Saída: </strong><br> Imprima uma saudação para a hora do dia: \"Boa Tarde!\",\"Boa Noite!\"\"Bom Dia!\"\"De Madrugada!\" ",
+				"<br><br><strong>Saída: </strong><br> A saída deve imprimir todas as classificações do triângulo apresentado na entrada, conforme a tabela de comparação.",
+				"<br><br><strong>Saída: </strong><br> Imprima o nome do funcionário, e o salário liquido",
+				"<br><br><strong>Saída: </strong><br> Imprima o valor de imposto devido e na linha seguinte o valor de imposto após as deduções",
+				"<br><br><strong>Saída: </strong><br> Você deve imprimir a mensagem \"Hello World!\" e depois a quebra de linha, conforme mostrado. ",
+				"<br><br><strong>Saída: </strong><br> Imprima exatamente o nome correspondente como está descrito na segunda coluna."
+			]
+		}
+	},
+	{
+		"topic_name": "conditional-aligned",
+		"topic_id": "10102",
+		"stem": "Base da estrutura 2 {var} {{{context2}}}",
+		"variable": {
+			"var": [
+				"var1",
+				"var1",
+				"var2"
+			]
+		},
+		"context2": {
+			"stem": "context 2 lorem impsum {{var3}}",
+			"var3": [
+				"context2",
+				"context3",
+				"context5"
+			]
+		}
+	},
+	{
+		"topic_name": "conditional-miscellaneous",
+		"topic_id": "10103",
+		"stem": "Base da estrutura 3",
+		"variable": {
+			"var1": "valorX",
+			"var2": "valorY"
+		}
+	},
+	{
+		"topic_name": "example-structure",
+		"topic_id": "10103",
+		"stem": "Base da estrutura 3",
+		"variable": {
+			"var1": "valorX",
+			"var2": "valorY"
+		}
+	}
 ]

@@ -1,0 +1,101 @@
+[
+  {
+    "topic_name": "conditional-table-comparison",
+    "topic_id": "1101",
+    "stem": " {{introduction}} {{context}} {{problem}} {{table_comparison}} {{solicitation}} {{input}} {{output}} ",
+    "variable": {
+      "introduction": [
+        "O uso de estruturas de decisão 'if' e 'else...",
+        "Uma estrutura de decisão é uma...",
+        "As estruturas de decisão são...",
+      ],
+      "context": [
+        "Dominar as condições...",
+        "No Brasil, os cidadões estão muito contetentes...",
+        "A classificação de triângulos é uma...",
+        "Você é um desenvolvedor de software..."
+      ],
+      "problem": [
+        "Leia um número inteiro que é o código...",
+        "Você está encarregado de calcular o Imposto de Renda ...",
+        "Você está encarregado de projetar um... ",
+        "A classificação de um trîangulo pode ser feita...",
+      ],
+      "table_comparison": [
+        "table_1",
+        "table_2",
+        "table_3"
+],
+      "solicitation": [
+        "Se o número de entrada não for encontrado na tabela acima, a saída deve ser \"Valor não cadastrado\" ",
+        "Leia as condições fornecidas na tabela de decisão e responda o que se pede.",
+        "Implemente uma série de instruções 'if' para cobrir todos os cenários possíveis listados na tabela.",
+        "Certifique-se que seu programa possa receber entradas e produzir saídas conforme esperado pelas condições informadas.",
+        "Calcule e imprima o valor dos impostos a serem pagos, seguindo a tabela de taxas informada, a resposta deve ser impressa com 2 dígitos após a vírgula.",
+        "Se o relógio mostra uma inclinação de 75º graus, em que período estamos? Descreva também qual seria a aparência do céu e atividade provável do sol ou da Lua para outros três pontos sinificativos deste relógio: 0º, 180º e 270º. Esta questão envolve a compreenção da posição relativa do Sol e da Lua em relação à Terra, bem como a interpretação dessa posição em termos de períodos do dia. É uma combinação interessante de astronomia com o conceito de leitura de relógio.",
+        "Escreva um programa com estrutura condicional que leia três números decimais representando os lados de um triângulo, organize esses valores em ordem decrescente, e determine e imprima todas as classificações ao triângulo formado pelos lados fornecidos.",
+        "Solicite o nome do funcionário, o salário bruto e a quantidade de dependentes. Considerando: Salário Líquido = Salário Bruto - Desconto INSS + (R$ 15,00 * Número de Dependentes) + Auxilio Passagem (R$ 250) + Auxilio Refeição (R$ 300).",
+        "Implemente um programa que além de calcular o valor devido baseado na tabela de alíquota, inclua uma dedução de R$ 689,33 por despesas médicas",
+        " "
+      ],
+      "input": [
+        "<br><br><strong>Entrada: </strong><br> A entrada consiste em um único número inteiro.",
+        "<br><br><strong>Entrada: </strong><br> A entrada consiste em um número de ponto flutuante, com 2 dígitos após o ponto decimal. 1 ",
+        "<br><br><strong>Entrada: </strong><br> A entrada contém um número inteiro M (0 <= M <= 360), Como a posição muda constantemente, o seu programa receberá vários casos de teste.",
+        "<br><br><strong>Entrada: </strong><br> Os valores de entrada contém três números decimais, A, B e C (0< A, B, C).",
+        "<br><br><strong>Entrada: </strong><br> Três valores de entrada, o primeiro é uma string, o segundo é um valor do salário com dois dígitos após o ponto decimal, e o terceiro é um valor inteiro maior ou igual a zero.",
+        "<br><br><strong>Entrada: </strong><br> Este problema não possui entrada.",
+        "<br><br><strong>Entrada: </strong><br> A entrada consiste em um número de ponto flutuante, com 1 dígitos após o ponto decimal. ",
+        "<br><br><strong>Entrada: </strong><br> A entrada contém um inteiro M (0 <= M <= 360) que representa o ângulo em graus"
+      ],
+      "output": [
+        "<br><br><strong>Saída: </strong><br> Imprima exatamente o nome correspondente como está descrito na segunda coluna. Imprima \"Valor não cadastrado\" se não existir um valor correspondente ao número digitado.",
+        "<br><br><strong>Saída: </strong><br> Imprima a mensagem \"R$\" seguida de um espaço em branco e o valor total a ser pago com dois dígitos após a vírgula",
+        "<br><br><strong>Saída: </strong><br> Imprima uma saudação para a hora do dia: \"Boa Tarde!\",\"Boa Noite!\"\"Bom Dia!\"\"De Madrugada!\" ",
+        "<br><br><strong>Saída: </strong><br> A saída deve imprimir todas as classificações do triângulo apresentado na entrada, conforme a tabela de comparação.",
+        "<br><br><strong>Saída: </strong><br> Imprima o nome do funcionário, e o salário liquido",
+        "<br><br><strong>Saída: </strong><br> Imprima o valor de imposto devido e na linha seguinte o valor de imposto após as deduções",
+        "<br><br><strong>Saída: </strong><br> Você deve imprimir a mensagem \"Hello World!\" e depois a quebra de linha, conforme mostrado. ",
+        "<br><br><strong>Saída: </strong><br> Imprima exatamente o nome correspondente como está descrito na segunda coluna."
+      ]
+    }
+  },
+  {
+    "topic_name": "conditional-aligned",
+    "topic_id": "10102",
+    "stem": "Base da estrutura 2 {var} {{{context2}}}",
+    "variable": {
+        "var": [
+            "var1",
+            "var1",
+            "var2"
+        ]
+    },
+    "context2": {
+        "stem": "context 2 lorem impsum {{var3}}",
+        "var3": [
+            "context2",
+            "context3",
+            "context5"
+        ]
+    }
+  },
+  {
+      "topic_name": "conditional-miscellaneous",
+      "topic_id": "10103",
+        "stem": "Base da estrutura 3",
+        "variable": {
+            "var1": "valorX",
+            "var2": "valorY"
+        }
+    },
+  {
+      "topic_name": "example-structure",
+      "topic_id": "10103",
+        "stem": "Base da estrutura 3",
+        "variable": {
+            "var1": "valorX",
+            "var2": "valorY"
+        }
+    }
+]
