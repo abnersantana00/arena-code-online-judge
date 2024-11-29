@@ -1,0 +1,62 @@
+{
+  "cod-template": "1102",
+  "nome-template": "if-composto",
+  "stem": "{{contexto}} {{{if-aninhado}}}",
+  "stem-var": {
+    "contexto": [
+      "",
+      "Uma plataforma de e-commerce oferece faixas de desconto em função do tipo de produto e valor de compra, ajustando as faixas conforme a categoria do cliente",
+      "Uma plataforma de e-commerce oferece faixas de desconto em função do tipo de produto e valor de compra, ajustando as faixas conforme a categoria do cliente",
+      "Um posto de combustível oferece descontos que variam de acordo com o tipo de combustível e a quantidade de litros, com faixas de desconto progressivas conforme o tipo de cliente",
+      "Um sistema aplica diferentes faixas de desconto com base em múltiplos critérios de qualificação específicos para cada tipo de estabelecimento ou cliente",
+      "Um serviço de entregas trabalha com tarifas de frete variáveis que são calculadas de acordo com o tamanho, peso e destino do pacote, oferecendo descontos progressivos para assinantes do programa fidelidade.",
+      "Em um sistema de e-commerce, o frete é calculado levando em consideração o peso, a distância e a categoria do cliente, que pode ter frete grátis para compras acima de um valor específico ou um desconto para assinantes frequentes.",
+      "Uma loja virtual oferece condições diferenciadas de frete para clientes fidelidade, que recebem desconto nas entregas para compras acima de um valor mínimo ou em certas categorias de produtos.",
+      "Uma plataforma de entregas calcula o valor do frete com base na distância, tipo de entrega e peso do pacote. Clientes fidelidade têm faixas de desconto adicionais no frete dependendo do volume de compras mensal",
+      "Uma plataforma de contabilidade ajuda autônomos a calcular impostos com base na faixa de renda e deduções específicas. Dependendo do valor total de rendimentos, diferentes alíquotas são aplicadas, e certas deduções, como educação e saúde, reduzem o imposto devido.",
+      " Um sistema de gestão fiscal em empresas ajusta as alíquotas de imposto com base no tipo de produto vendido e o volume mensal de vendas. Produtos de luxo têm faixas de tributação mais altas, enquanto produtos essenciais têm impostos reduzidos ou isenção para determinadas faixas de valor.",
+      "Em uma cidade, as multas por excesso de velocidade são aplicadas conforme a porcentagem que o motorista excede o limite permitido na via. As penalidades são definidas pelo Código de Trânsito Brasileiro (CTB)",
+      " Uma academia oferece diferentes planos de assinatura para seus clientes, com taxas e benefícios variados de acordo com o tipo de plano, a frequência de visitas e a idade do cliente. A academia incentiva a prática regular de atividades físicas e, para isso, concede descontos para clientes que frequentam a academia",
+      "Um supermercado está promovendo uma grande promoção durante o fim de semana da Black Friday para incentivar as compras de final de ano. A promoção oferece descontos em função do valor total da compra, do tipo de produtos comprados, e do tipo de cliente Além disso, há benefícios adicionais para quem atinge certas condições. O sistema do supermercado deve calcular o valor final da compra com base em descontos acumulativos e indicar quais benefícios o cliente receberá.\n",
+      "Uma empresa de seguros oferece planos para proteger residências contra eventos como incêndios, roubos e desastres naturais. O valor do seguro é baseado nas características da residência e nos históricos de sinistros anteriores do cliente."
+    ]
+  },
+  "layer-1": {
+    "layer-nome": "if-aninhado",
+    "stem": "{{avaliacao-credito}}{{desconto}}{{frete}}{{imposto}}{{imposto-renda}}{{multa}}{{promocao}}{{seguro}}",
+    "layer-1-var": {
+      "avaliacao-credito": [
+        "",
+        "texto"
+      ],
+      "desconto": [
+        "",
+        "Se o cliente é fidelidade:\nEntão, se comprou mais de 10 itens, o desconto é de 10%.\nSenão, se comprou entre 5 e 10 itens, o desconto é de 5%.\nSenão, o desconto é de 0%.\n\nSe o cliente é regular:\nEntão, se comprou mais de 10 itens, o desconto é de 5%.\nSenão, se comprou entre 5 e 10 itens, o desconto é de 2%.\nSenão, o desconto é de 0%.\n\nSe nenhum dos critérios anteriores for atendido, não há desconto."
+      ],
+      "frete": [
+        "",
+        "Para clientes fidelidade:\nSe o valor da compra for maior que R$ 200, o frete é gratuito.\nSe o valor da compra estiver entre R$ 100 e R$ 200, o frete tem 50% de desconto.\nSe o valor da compra for inferior a R$ 100, o frete é cobrado integralmente.\n\nPara clientes regulares:\nSe o valor da compra for maior que R$ 300, o frete é gratuito.\nSe o valor da compra estiver entre R$ 150 e R$ 300, o frete tem 20% de desconto.\nSe o valor da compra for inferior a R$ 150, o frete é cobrado integralmente."
+      ],
+      "imposto": [
+        "",
+        "Se a renda mensal for maior que R$ 10.000:\nSe o trabalhador possui filhos, aplica-se um desconto de 5% sobre a alíquota de 27,5%.\nSe o trabalhador não possui deduções, aplica-se a alíquota integral de 27,5%.\nSe a renda mensal estiver entre R$ 5.000 e R$ 10.000:\nSe possui dependentes, aplica-se um desconto de 3% sobre a alíquota de 15%.\nSenão, aplica-se a alíquota de 15%.\nSe a renda for inferior a R$ 5.000:\nIsento de imposto."
+      ],
+      "imposto-de-renda": [
+        "",
+        "Se a renda mensal for superior a R$ 12.000:\nSe possui despesas médicas superiores a R$ 2.000, aplica-se uma alíquota de 27,5% menos uma dedução de R$ 1.000.\nSenão, aplica-se uma alíquota de 27,5%.\nSe a renda mensal estiver entre R$ 6.000 e R$ 12.000:\nSe possui despesas com educação, aplica-se uma alíquota de 15% com uma dedução de R$ 500.\nSenão, aplica-se a alíquota de 15%.\nSe a renda for inferior a R$ 6.000:\nIsento de imposto."
+      ],
+      "multa": [
+        "",
+        "Para essa tarefa, você deve implementar a lógica de cálculo de multa diretamente no código, utilizando as variáveis abaixo:\n\nvelocidade_limite: o limite de velocidade permitido na via (em km/h).\nvelocidade_motorista: a velocidade registrada do motorista (em km/h).\nzona_especial: um valor booleano (True ou False) que indica se a infração ocorreu em uma zona especial (escolar ou hospitalar).\n\n\n\nCalcule a multa e os pontos de acordo com as seguintes regras:\n\nSe a infração ocorrer em uma zona especial:\n\nSe a velocidade exceder o limite em até 20%:\nInfração grave: multa de R$ 195,23 e 5 pontos na CNH.\nSe a velocidade exceder o limite entre 20% e 50%:\nInfração gravíssima: multa de R$ 293,47, 7 pontos na CNH e suspensão do direito de dirigir.\nSe a velocidade exceder o limite em mais de 50%:\nInfração gravíssima com fator multiplicador: multa de R$ 880,41, 7 pontos na CNH e suspensão do direito de dirigir.\n\nSe a infração ocorrer fora de uma zona especial:\n\nSe a velocidade exceder o limite em até 20%:\nInfração média: multa de R$ 130,16 e 4 pontos na CNH.\nSe a velocidade exceder o limite entre 20% e 50%:\nInfração grave: multa de R$ 195,23 e 5 pontos na CNH.\nSe a velocidade exceder o limite em mais de 50%:\nInfração gravíssima: multa de R$ 293,47 e 7 pontos na CNH.\n\nImplemente o código para calcular a multa e exibir o valor da multa, a quantidade de pontos na CNH e uma mensagem descrevendo a penalidade."
+      ],
+      "promocao": [
+        "",
+        "Condições da Promoção:\n\nDesconto por valor total da compra:\n\nSe o valor total da compra for superior a R$ 1.000:\nAplica-se um desconto de 15%.\nSe o valor total da compra estiver entre R$ 500 e R$ 1.000:\nAplica-se um desconto de 10%.\nSe o valor total da compra for inferior a R$ 500:\nAplica-se um desconto de 5%.\n\nDesconto adicional por tipo de produto:\n\nSe a compra incluir produtos perecíveis (como frutas, verduras ou carnes):\nAplica-se um desconto adicional de 5%.\nSe a compra incluir produtos de higiene:\nAplica-se um desconto adicional de 7%.\nNão há desconto adicional para outros tipos de produtos.\n\nDesconto adicional por tipo de cliente:\n\nSe o cliente for fiel (cliente que já realizou pelo menos 5 compras no ano):\nAplica-se um desconto adicional de 5%.\nSe o cliente for novo (primeira vez comprando no supermercado):\nAplica-se um desconto de boas-vindas de 3%.\nCaso contrário, não há desconto adicional.\n\nBenefícios adicionais:\n\nSe o valor final da compra (após aplicar todos os descontos) for superior a R$ 800:\nO cliente recebe um cupom de R$ 50 para a próxima compra.\nSe o valor final for superior a R$ 1.200:\nO cliente recebe um cupom de R$ 100 para a próxima compra e um brinde especial.\nCaso contrário, o cliente não recebe benefícios adicionais.\n\n\n\nInstruções:\n\nImplemente um código que calcule o valor final da compra e determine os benefícios para o cliente. Use variáveis para armazenar as informações da compra, como valor total, tipo de produto e tipo de cliente"
+      ],
+      "seguro": [
+        "",
+        "O sistema deve calcular o valor final do seguro residencial anual e verificar se o cliente se qualifica para uma cobertura extra de responsabilidade civil, que protege contra danos causados a terceiros. O cálculo considera os seguintes critérios:\n\nRegras de Cálculo e Descontos:\n\nDesconto por Tipo de Residência:\n\nSe a residência for uma casa:\nO valor base do seguro é de R$ 1.500,00.\nSe a residência for um apartamento:\nO valor base do seguro é de R$ 1.200,00.\n\nDesconto Adicional por Sistemas de Segurança Instalados:\n\nSe a residência tiver um sistema de alarme e câmeras de segurança:\nRecebe um desconto adicional de 10% sobre o valor base.\nSe a residência tiver apenas um sistema de alarme:\nRecebe um desconto adicional de 5% sobre o valor base.\nSe a residência não tiver sistemas de segurança, não recebe desconto adicional.\n\nDesconto por Histórico de Sinistros:\n\nSe o cliente não tiver registrado sinistros nos últimos 5 anos:\nRecebe um desconto adicional de 15% sobre o valor após os descontos de segurança.\nCobertura Extra:\nSe o valor final do seguro (após os descontos) for superior a R$ 1.000,00:\nE o cliente não registrou sinistros nos últimos 3 anos, ele recebe a cobertura extra de responsabilidade civil.\nCaso contrário, o cliente não recebe a cobertura extra."
+      ]
+    }
+  }
+}

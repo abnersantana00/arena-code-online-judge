@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_protect
-from .utils import extract_titles, generate_all_questions, generate_one_question, run_test
+from .utils import *
 import json, random
 def home(request):
     return render(request, 'home.html')
@@ -11,16 +11,24 @@ def home(request):
 # condicionais
 def topic(request, topic):
 
-    if topic == 'conditional':
-         titles_info = extract_titles('main/static/json-files/templates/conditional.json')
-         context = {
-                    'titles_info': titles_info,
+    file1 = f'main/static/json-files/templates/{topic}.json'
+    file2 = f'main/static/json-files/questions/{topic}-questoes.json'
+    print(file1)
+    with open(file1, 'r', encoding='utf-8') as file:
+        json_template = json.load(file)
+    with open(file2, 'r', encoding='utf-8') as file:
+        json_questions = json.load(file)
+
+
+
+    context = {
+
                     'topic': topic,
                     }
 
 
 
-         return render(request, 'topic.html', context)
+    return render(request, 'topic.html', context)
 
 
 def topic_detail(request, topic, topic_name):
@@ -76,7 +84,3 @@ def source_code(request, topic, topic_name, problem_id):
         return render(request, 'topic_source_code.html', context)
 
     return render(request, 'topic_source_code.html')
-
-
-
-

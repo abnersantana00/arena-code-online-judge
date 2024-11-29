@@ -1,0 +1,1181 @@
+{
+  "cod-template": "1101",
+  "questoes": [
+    {
+      "titulo": "Faixa Salarial 1",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "9",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria ": "0",
+        "faixa-salarial": "1",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Faixa Salarial 1",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "9",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria ": "0",
+        "faixa-salarial": "2",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Faixa Salarial 1",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "9",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria ": "0",
+        "faixa-salarial": "3",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Faixa Salarial 1",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "9",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria ": "4",
+        "faixa-salarial": "1",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Faixa Salarial 1",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "9",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria ": "0",
+        "faixa-salarial": "5",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "10",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "1",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "10",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "2",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "10",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "3",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "10",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "4",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "10",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "5",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "1",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "1",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "1",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "2",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "1",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "3",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "1",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "4",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "1",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "5",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "1",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "6",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "2",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "1",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "2",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "2",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "2",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "3",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "2",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "4",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "2",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "5",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "2",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "6",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "5",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "1",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "5",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "2",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "5",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "3",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "5",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "4",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "5",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "5",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "5",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "6",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "1",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "2",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "3",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "4",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "5",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "6",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "7",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "7",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "1",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "7",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "2",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "7",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "3",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "7",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "4",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "7",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "5",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "7",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "6",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "7",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "7",
+        "limite": "0",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "1",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "2",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "3",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "4",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "5",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "6",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "8",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "7",
+        "nota-aluno": "0"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "3",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "1"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "3",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "2"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "3",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "3"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "3",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "4"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "3",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "5"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "3",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "6"
+      }
+    },
+    {
+      "titulo": "Classificação ",
+      "cod-questao": "1013",
+      "stem-var": {
+        "cenario-padrao": "1",
+        "cenario": "3",
+        "entrada-exemplo": "1",
+        "saida-exemplo": "1"
+      },
+      "layer-1-var": {
+        "temperatura": "0",
+        "faixa-etaria": "0",
+        "faixa-salarial": "0",
+        "operacao-numerica": "0",
+        "velocidade": "0",
+        "peso": "0",
+        "ambiente": "0",
+        "limite": "0",
+        "nota-aluno": "7"
+      }
+    }
+  ]
+}

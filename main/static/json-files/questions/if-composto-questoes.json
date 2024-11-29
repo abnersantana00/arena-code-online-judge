@@ -1,0 +1,22 @@
+{
+  "cod-template": "1102",
+  "questoes": [
+    {
+      "titulo": "Desconto 1",
+      "cod-questao": "1013",
+      "stem-var": {
+        "contexto": "1"
+      },
+      "layer-1-var": {
+        "avaliacao-credito": "1",
+        "desconto": "0",
+        "frete": "0",
+        "imposto": "0",
+        "imposto-de-renda": "0",
+        "multa": "0",
+        "promocao": "0",
+        "seguro": "0"
+      }
+    }
+  ]
+}

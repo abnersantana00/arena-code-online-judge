@@ -1,0 +1,125 @@
+{
+  "cod-template": "1101",
+  "assunto" : "condicionais",
+  "nome-topico": "if-simples",
+  "stem": "Desenvolva um programa que {{cenario}} {{{condicao}}}\n\n{{cenario-padrao}}\n\nEntrada :\n{{entrada-exemplo}}\n\nSaida :\n{{saida-exemplo}}",
+  "stem-var": {
+    "cenario": [
+      "",
+      "Verifique a temperatura da condição ambiente e determine a ação adequada.",
+      "Desenvolva um programa que verifique a faixa etária de uma pessoa, uma vez que a idade é um fator importante para diversas finalidades.",
+      "Classifique a nota de um aluno com base em uma prova.",
+      "Desenvolva um programa que realize operações numéricas e verifique diferentes condições baseadas nos valores fornecidos. ",
+      "Classifique a velocidade de um veículo com base na leitura de seu velocímetro. O sistema deve identificar se o veículo está dentro dos limites de segurança ou se está em velocidade perigosa.",
+      "Desenvolva um programa que verifique e classifique diferentes situações baseadas no peso.",
+      "verifique a condição da umidade de um ambiente",
+      "verifique se a bagagem de um passageiro está dentro do limite permitido",
+      "leia a faixa salarial de um funcionário e o classifique em uma das categorias salarias predefinidas. O programa deve exibir uma mensagem correspondente à faixa salarial, de acordo com as seguintes regras:\n",
+      "dado um  conjunto de entradas fornecida pelo usuário, sua tarefa é desenvolver um programa que classifique esses valores de acordo com os critérios predefinidos a seguir:\n"
+    ],
+    "cenario-padrao": [
+      "",
+      "Se nenhuma das alternativas for atendida então exiba a mensagem : \"Valor inválido, tente novamente\".",
+      "Caso nenhuma das condições anteriores seja satisfeita, mostre a mensagem: 'Valor inválido, tente novamente'.",
+      "Se todas as verificações falharem, exiba a mensagem: 'Valor inválido, tente novamente'.",
+      "Se nenhuma das opções se aplicar, retorne a mensagem: 'Valor inválido, tente novamente'."
+    ],
+    "entrada-exemplo": [
+      "",
+      "Valor real com ponto flutuante com duas casas decimais"
+    ],
+    "saida-exemplo": [
+      "",
+      "Palavras contendo apenas letras de (A a Z) maiúsculas e minúsculas "
+    ]
+  },
+  "layer-1": {
+    "layer-nome": "condicao",
+    "stem": "{{faixa-salarial}}{{temperatura}}{{faixa-etaria}}{{operacao-numerica}}{{velocidade}}{{ambiente}}{{limite}}{{nota-aluno}}",
+    "layer-1-var": {
+      "temperatura": [
+        "",
+        "Crie um programa que ajude a classificar a temperatura em diferentes categorias para auxiliar os agricutores no planejamento da irrigação.\n\nSe a temperatura for menor que 10°C, classifique como \"Muito Frio\".\nSe a temperatura estiver entre 10°C e 20°C, classifique como \"Frio\".\nSe a temperatura estiver entre 21°C e 30°C, classifique como \"Agradável\".\nSe a temperatura estiver entre 31°C e 40°C, classifique como \"Quente\".\nAcima de 40°C, classifique como \"Muito Quente\".",
+        "O serviço de monitoramento climático está implementando um sistema de alerta para ondas de calor. eles precisam classificar a temperatura de acordo com o risco à saúde da população.\n\nMenos de 15°C: \"Temperatura Segura\".\nEntre 15°C e 30°C: \"Alerta Baixo\".\nEntre 31°C e 37°C: \"Alerta Moderado\".\nEntre 38°C e 45°C: \"Alerta Alto\".\nAcima de 45°C: \"Perigo Extremo\".\n",
+        "Uma fábrica de alimentaos utiliza câmaras frigoríficas para armazenar produtos perecíveis. O responsável pelo controle da câmara deve ajustar o funcionamento de acordo com a temperatura medida exibida na tela do usuário.\n \n\nMenor que -10°C: \"Câmara em Risco de Congelamento Excessivo\".\nEntre -10°C e 0°C: \"Temperatura Ideal\".\nEntre 1°C e 5°C: \"Temperatura Alta, Reduzir Resfriamento\".\nAcima de 5°C: \"Ajuste Imediato Necessário\".\n",
+        "Em uma estufa de cultivo de flores exóticas, é necessário monitorar a temperatura e classificá-la para ajustar o sistema de ventilação e aquecimento.\n\nMenos de 12°C: \"Aquecimento Necessário\".\nEntre 12°C e 18°C: \"Temperatura Baixa, Ventilação Reduzida\".\nEntre 19°C e 25°C: \"Temperatura Ideal\".\nEntre 26°C e 30°C: \"Aumentar Ventilação\".\nAcima de 30°C: \"Perigo de Superaquecimento, Alertar o Supervisor\".\n",
+        "Um aquário público possui indicadores para monitorar a temperatura dos tanques de peixes tropicais. Se a temperatura não estiver no intervalo ideal, o sistema precisa ajustar a refrigeração\n\n\nMenos de 22°C: \"Temperatura Baixa, Aumentar Aquecimento\".\nEntre 22°C e 28°C: \"Temperatura Ideal, Não Ajustar\".\nAcima de 28°C: \"Temperatura Alta, Aumentar Refrigeração\".",
+        "Uma fábrica de sorvetes, é crucial manter a temperatura dos tanques de armazenamento em níveis adequados para garantir a qualidade do produto. O sistema automatizado precisa ajustar as condições de resfriamento de acordo com as medições:\n\nMenos de -25°C: \"Temperatura Muito Baixa, Reduzir Resfriamento\".\nEntre -25°C e -20°C: \"Temperatura Ideal para Armazenamento\".\nAcima de -20°C: \"Temperatura Alta, Aumentar Resfriamento\".\n"
+      ],
+      "faixa-etaria": [
+        "",
+        "Você está desenvolvendo um sistema para um acampamento de verão que quassifica os participantes em diferentes grupos de atividades de acordo com suas idades.\n\nMenos de 6 anos: \"Grupo Infantil\".\nEntre 6 e 12 anos: \"Grupo Infantojuvenil\".\nEntre 13 e 17 anos: \"Grupo Juvenil\".\nAcima de 17 anos: \"Grupo Adulto\".\n",
+        "Uma academia fornece diferentes tipos de treinos personalizados com base na faicxa etária de cada cliente. Você precisa programar um sistema que classifique as idades para facilitar a recomendação dos treinos.\n\nMenos de 12 anos: \"Plano Infantil - Aulas Lúdicas\".\nEntre 12 e 18 anos: \"Plano Adolescente - Treinos Leves\".\nEntre 19 e 59 anos: \"Plano Adulto - Treinos Completos\".\n60 anos ou mais: \"Plano Senior - Treinos Funcionais\".\n",
+        "Um clube de tabuleiro organiza torneis segmentados por faixa etária. O seu desafio é criar um programa que classifique os participantes no tornei com base em suas idades.\n\nMenos de 10 anos: \"Categoria Infantil\".\nEntre 10 e 17 anos: \"Categoria Juvenil\".\nEntre 18 e 30 anos: \"Categoria Jovens Adultos\".\nAcima de 30 anos: \"Categoria Adultos\".\n",
+        "Uma cidade oferece descontos no transporte público com base na idade dos cidadãos. VOcê deve desenvolver um programa que determine o tipo de tarifa com base na faixa etária\n\nMenos de 5 anos: \"Tarifa Gratuita\".\nEntre 5 e 18 anos: \"Tarifa Estudante com Desconto\".\nEntre 19 e 64 anos: \"Tarifa Regular\".\nAcima de 65 anos: \"Tarifa Gratuita para Idosos\".\n",
+        "Um clube de cinema local organiza sessões de filmes para diferentes faixas etárias e oferece descontos para certos grupos. O programa deve determinar a faixa etária do cliente e indicar o desconto do ingresso.\n\n\nMenos de 12 anos: \"Sessão Infantil - Entrada Gratuita\".\nEntre 12 e 18 anos: \"Sessão Adolescente - Desconto de 50%\".\nEntre 19 e 60 anos: \"Sessão Regular - Preço Integral\".\nAcima de 60 anos: \"Sessão Sênior - Desconto de 30%\".\n",
+        "Uma seguradora de automóveis determina o valor do seguro com base na faixa etária dos motoristas. Você precisa criar um programa que classifique os clientes e forneça a faixa de valor do seguro.\n\nMenos de 18 anos: \"Não Elegível para Seguro\".\nEntre 18 e 25 anos: \"Seguro com Valor Alto\".\nEntre 26 e 60 anos: \"Seguro com Valor Moderado\".\nAcima de 60 anos: \"Seguro com Valor Reduzido\".\n"
+      ],
+      "faixa-salarial": [
+        "",
+        "\nSe o salário for menor que R$ 1.440 exiba : \"Baixo Salário\"\nSe o salário estiver entre R$ 2.001 e R$ 5.000 exiba : \"Salário Médio\"\nSe o salário estiver entre R$ 5.001 e R$ 10.000 exiba : \"Alto Salário\"\nSe o salário for maior que R$ 10.001 exiba : \"Muito Alto Salário\"",
+        "\nSe o salário for menor que R$ 1.500, mostre: 'Salário Muito Baixo'.\nSe o salário for entre R$ 1.501 e R$ 3.000, mostre: 'Salário Baixo'.\nSe o salário for entre R$ 3.001 e R$ 6.000, mostre: 'Salário Médio'.\nSe o salário for maior que R$ 6.000, mostre: 'Salário Alto'.",
+        "\nSe o salário for menor que R$ 1.500, mostre: 'Salário Muito Baixo'.\nSe o salário for entre R$ 1.501 e R$ 3.000, mostre: 'Salário Baixo'.\nSe o salário for entre R$ 3.001 e R$ 6.000, mostre: 'Salário Médio'.\nSe o salário for maior que R$ 6.000, mostre: 'Salário Muito Alto'.",
+        "\nSe o salário for menor que R$ 1.201, exiba: 'Salário Muito Baixo'.\nSe o salário estiver entre R$ 1.200 e R$ 2.500, exiba: 'Salário Baixo'.\nSe o salário estiver entre R$ 2.500 e R$ 4.500, exiba: 'Salário Médio'.\nSe o salário for maior que R$ 4.500, exiba: 'Salário Alto'.",
+        "\nExibir \"Baixo salário\" se o salário for menor que R$ 1.250.\nExibir \"Salário médio\" se o salário estiver entre R$ 2.102 e R$ 5.525.\nExibir \"Alto salário\" se o salário estiverentre R$ 5.505 e R$ 10.000.\nExibir \"Muito alto salário\" se o salário for maior que R$ 10.000."
+      ],
+      "operacao-numerica": [
+        "",
+        "Determine se o número é par ou impar. Exiba a mensagem.\n\n\"Par\" se o número for divisível por 2\n\"Ímpar\" caso contrário",
+        "Verifique se o número é positivo, negativo ou zero. O programa deve exibir.\n\n\"Positivo\" se o número for maior que zero\n\"Negativo\" se o número for menor que zero\n\"Zero\" se o número for igual a zero",
+        "Leia dois números inteiros e exiba qual é o maior seguindo os critérios a seguir.\n\nSe o primeiro numero for maior, exiba \"O primeiro número é maior\"\nSe o segundo número for maior, exiba \"O segundo número é maior\"\nSe forem iguais, exiba \"Os números são iguais\"",
+        "Verifique se um número é mutiplo de 5. O programa deve exibir.\n\n\"Mútiplo de 5\" se o número for divisível por 5\n\"não é mútiplo de 5\" caso contrário. ",
+        "Leia dois números inteiros e verifique se são consecutivos. O programa deve exibir.\n\n\"São consecutivos\" se a diferença entre os dois números for 1 ou -1\n\"Não são consecutivos\" caso contrário"
+      ],
+      "velocidade": [
+        "",
+        "Um sistema de monitoramento de rodovias foi implementado para identificar infrações de velocidade e auxiliar na segurança do trânsito. O sistema deve classificar a velocidade e gerar alertas conforme necessário.\n\nMenos de 60 km/h: \"Velocidade Abaixo do Limite Mínimo, Gerar Alerta de Lentidão\".\nEntre 60 km/h e 120 km/h: \"Velocidade dentro do Limite, Sem Ação Necessária\".\nAcima de 120 km/h: \"Velocidade Acima do Limite, Gerar Multa\".",
+        "Uma fabrica automatizada utiliza esteiras para movimentar os produtos. O sistema precisa controlar a velocidade das esteiras para evitar acidentes e garantir a produtividade.\n\nMenos de 1 m/s: \"Velocidade Muito Baixa, Aumentar para Otimizar o Processo\".\nEntre 1 m/s e 3 m/s: \"Velocidade Ideal para Movimentação Segura\".\nAcima de 3 m/s: \"Velocidade Alta, Risco de Danos aos Produtos\".\n",
+        "Durante uma competição de atletismo, o sistema de de cronometragem deve classificar os atletas com base na velocidade média da corrida e determinar o nível de desempenho de cada um.\n\nMenos de 6 m/s: \"Velocidade Lenta, Abaixo da Média\".\nEntre 6 m/s e 9 m/s: \"Velocidade Adequada, Dentro da Média\".\nAcima de 9 m/s: \"Velocidade Alta, Nível de Desempenho Excelente\".\n",
+        "Um parque de diversões automatizado ajusta a velocidade de seus brinquedos dependendo da faixa etária dos usuários para garantir segurança e diversão. O sistema deve regular a velocidade com base nos dados de idade dos participantes.\n\nMenos de 5 anos: \"Velocidade Lenta, Modo Infantil\".\nEntre 5 e 12 anos: \"Velocidade Moderada, Modo Infantojuvenil\".\nAcima de 12 anos: \"Velocidade Máxima, Modo Adulto\".\n",
+        "Uma empresa de logística monitora a velocidade de seus caminhões de entrega para otimizar as rotas e garantir que os prazos de entrega sem cumpridos sem comprometer a segurança.\n\nMenos de 60 km/h: \"Velocidade Muito Lenta, Possível Atraso\".\nEntre 60 km/h e 100 km/h: \"Velocidade Ideal, Entrega no Prazo\".\nAcima de 100 km/h: \"Velocidade Alta, Risco de Acidente\".\n",
+        "Uma pista de kart outdoor oferece corridas para diferentes níveis de habilidade. O sistema precisa limitar a velocidade máxima dos karts automaticamente com base na experiência dos pilotos.\n\nMenos de 20 km/h: \"Velocidade para Iniciantes\".\nEntre 20 km/h e 40 km/h: \"Velocidade para Pilotos Intermediários\".\nAcima de 40 km/h: \"Velocidade para Pilotos Avançados\".\n"
+      ],
+      "peso": [
+        "",
+        "Uma empresa de logística automatizou o controle de peso das cargas para garantir que os caminhões estejam dentro dos limites permitidos pelas leis de trânsito.\n\nSe a carga pesar menos de 500 kg, exibir: \"Carga leve, caminhão liberado\".\nSe a carga pesar entre 500 kg e 3000 kg, exibir: \"Carga moderada, caminhão liberado\".\nSe a carga pesar mais de 3000 kg, exibir: \"Carga pesada, caminhão com restrição\".\n",
+        "Em um aeroporto, o sistema de check-in precisa verificar o peso das bagagens dos passageiros. Dependendo do peso, pode haver cobrança de taxa adicional.\n\nSe a bagagem pesar até 23 kg, exibir: \"Bagagem dentro do limite, sem taxas\".\nSe pesar entre 23 kg e 32 kg, exibir: \"Bagagem acima do limite, taxa adicional aplicada\".\nSe pesar mais de 32 kg, exibir: \"Bagagem não permitida, ajuste necessário\".\n",
+        "Um prédio comercial instalou sensores nos elevadores para monitorar o peso total. Se o peso exceder o limite de segurança, o elevador emite um aviso e impede que funcione.\n\nSe o peso total for menor que 800 kg, exibir: \"Peso dentro do limite, elevador liberado\".\nSe o peso for entre 800 kg e 1000 kg, exibir: \"Peso elevado, cuidado!\".\nSe o peso for maior que 1000 kg, exibir: \"Peso excedido, elevador bloqueado\".\n",
+        "Em competições de boxe, os atletas precisam ser classificados por categoria de peso. O sistema deve organizar os atletas em três categorias principais.\n\nSe o peso for menor que 60 kg, exibir: \"Categoria leve\".\nSe o peso for entre 60 kg e 80 kg, exibir: \"Categoria médio\".\nSe o peso for maior que 80 kg, exibir: \"Categoria pesado\".\n",
+        "Em uma academia, os alunos são classificados com base no índice de massa corporal (IMC) para determinar o tipo de treino ideal.\n\nSe o peso estiver abaixo de 18,5 no cálculo de IMC, exibir: \"Plano de treino para ganho de peso\".\nSe o IMC estiver entre 18,5 e 24,9, exibir: \"Plano de treino para manutenção de peso\".\nSe o IMC for maior que 24,9, exibir: \"Plano de treino para perda de peso\".\n",
+        "Um sistema de monitoramento em uma transportadora verifica se o peso da carga em um caminhão está dentro dos limites permitidos pela lei.\n\nSe o peso for menor que 5000 kg, exibir: \"Peso abaixo do limite\".\nSe o peso estiver entre 5000 kg e 15000 kg, exibir: \"Peso dentro do limite\".\nSe o peso for superior a 15000 kg, exibir: \"Peso excedido, carga não permitida\".\n",
+        "Um sistema de controle de elevadores monitora o peso total de pessoas no elevador.\n\nSe o peso total for menor que 800 kg, exibir: \"Elevador liberado\".\nSe o peso total estiver entre 800 kg e 1000 kg, exibir: \"Peso alto, cuidado\".\nSe o peso total for superior a 1000 kg, exibir: \"Peso excedido, elevador bloqueado\".\n"
+      ],
+      "ambiente": [
+        "",
+        "Um sistema de monitoramento ambiental em uma cidade verifica a qualidade do ar com base na concentração de poluentes e emite alertas à população.\n\nSe o índice de qualidade do ar for menor que 50, exibir: \"Qualidade do ar boa, sem restrições\".\nSe o índice estiver entre 51 e 100, exibir: \"Qualidade do ar moderada, pessoas sensíveis devem evitar atividades ao ar livre\".\nSe o índice for superior a 100, exibir: \"Qualidade do ar ruim, evite atividades ao ar livre\".\n",
+        "Um prédio comercial utiliza um sistema automatizado para ajustar a temperatura interna dos escritórios com base nas condições externas, garantindo conforto aos funcionários.\n\nSe a temperatura externa for menor que 15°C, exibir: \"Ativar aquecimento no prédio\".\nSe a temperatura externa estiver entre 15°C e 25°C, exibir: \"Manter ventilação natural\".\nSe a temperatura externa for maior que 25°C, exibir: \"Ativar ar-condicionado\".\n",
+        "Um sistema monitora a qualidade da água de um rio utilizado como fonte de abastecimento para várias cidades. O nível de poluição determina se o uso da água é seguro.\n\nSe o nível de poluição for menor que 20%, exibir: \"Água potável, segura para uso\".\nSe o nível de poluição estiver entre 20% e 40%, exibir: \"Água com alerta de poluição, monitoramento necessário\".\nSe o nível de poluição for superior a 40%, exibir: \"Água imprópria para consumo, interromper abastecimento\".\n",
+        "Um sistema de monitoramento ambiental emite alertas de incêndios florestais com base na umidade do solo e na temperatura do ambiente.\n\nSe a umidade do solo for superior a 30% e a temperatura menor que 30°C, exibir: \"Risco de incêndio baixo\".\nSe a umidade estiver entre 15% e 30% e a temperatura entre 30°C e 40°C, exibir: \"Risco de incêndio moderado, monitoramento contínuo\".\nSe a umidade for inferior a 15% e a temperatura superior a 40°C, exibir: \"Risco de incêndio elevado, emitir alerta\".\n",
+        "Um sistema de monitoramento de ruído urbano emite alertas se o nível de barulho em uma área ultrapassar limites estabelecidos.\n\nSe o nível de ruído for inferior a 50 decibéis, exibir: \"Nível de ruído dentro dos padrões\".\nSe o nível de ruído estiver entre 50 e 70 decibéis, exibir: \"Nível de ruído moderado, atenção em horários de pico\".\nSe o nível de ruído for superior a 70 decibéis, exibir: \"Nível de ruído elevado, ação necessária para reduzir barulho\".\n",
+        "Um sistema de irrigação em uma fazenda monitora as condições climáticas e a umidade do solo para decidir quando iniciar a irrigação das plantações.\n\nSe a umidade do solo for superior a 40%, exibir: \"Solo com umidade adequada, irrigação desativada\".\nSe a umidade estiver entre 20% e 40%, exibir: \"Irrigação ativada em modo moderado\".\nSe a umidade for inferior a 20%, exibir: \"Irrigação ativada em modo intenso\".\n",
+        "Um sistema agrícola monitora os níveis de nutrientes e pH do solo em uma plantação para garantir que o ambiente seja adequado para o crescimento das plantas.\n\nSe o pH do solo for menor que 6, exibir: \"Solo ácido, aplicar corretivos de calagem\".\nSe o pH estiver entre 6 e 7,5, exibir: \"pH ideal para o cultivo\".\nSe o pH for superior a 7,5, exibir: \"Solo alcalino, aplicar fertilizantes ácidos\".\n"
+      ],
+      "limite": [
+        "",
+        "Um sistema de monitoramento de tráfego em uma rodovia controla a velocidade dos veículos e emite multas quando o limite de velocidade é ultrapassado.\n\nSe o veículo estiver abaixo do limite de 100 km/h, exibir: \"Velocidade dentro do limite\".\nSe o veículo estiver entre 100 km/h e 120 km/h, exibir: \"Atenção, velocidade acima do limite permitido, sujeito a advertência\".\nSe o veículo ultrapassar 120 km/h, exibir: \"Multa por excesso de velocidade\".\n",
+        "Uma fábrica monitora suas emissões de CO2 para garantir que não ultrapasse o limite ambiental permitido. O sistema emite alertas conforme as emissões aumentam.\n\nSe as emissões estiverem abaixo de 60% do limite, exibir: \"Emissões dentro do limite\".\nSe as emissões estiverem entre 60% e 90%, exibir: \"Emissões próximas do limite, monitorar atentamente\".\nSe as emissões ultrapassarem 90%, exibir: \"Limite de emissões excedido, medidas corretivas necessárias\".\n",
+        "Um sistema de segurança precisa verificar se a senha criada por um usuário atende aos limites de caracteres definidos pela política de segurança.\n\nSe a senha tiver menos de 8 caracteres, exibir: \"Senha muito curta, deve ter pelo menos 8 caracteres\".\nSe a senha tiver entre 8 e 16 caracteres, exibir: \"Senha válida, dentro dos limites\".\nSe a senha tiver mais de 16 caracteres, exibir: \"Senha muito longa, máximo permitido é 16 caracteres\".\n",
+        "Uma empresa está implementando um sistema que verifica se os IDs de funcionários seguem o formato correto, com uma combinação de letras e números.\n\nSe o ID começar com uma letra e tiver exatamente 6 caracteres, exibir: \"ID válido\".\nSe o ID começar com um número ou tiver mais ou menos de 6 caracteres, exibir: \"ID inválido, revise o formato\".\n",
+        "Um sistema de cadastro de clientes precisa validar os números de telefone, que devem estar dentro de um limite específico de dígitos.\n\nSe o número de telefone tiver menos de 10 dígitos, exibir: \"Número de telefone inválido, abaixo do limite\".\nSe o número de telefone tiver exatamente 10 dígitos, exibir: \"Número de telefone válido\".\nSe o número de telefone tiver mais de 10 dígitos, exibir: \"Número de telefone inválido, acima do limite\".\n",
+        "Uma empresa de logística está implementando um sistema para verificar se os códigos de seus produtos estão dentro dos limites de comprimento.\n\nSe o código de produto tiver menos de 5 caracteres, exibir: \"Código de produto inválido, deve ter ao menos 5 caracteres\".\nSe o código de produto tiver entre 5 e 10 caracteres, exibir: \"Código de produto válido\".\nSe o código de produto tiver mais de 10 caracteres, exibir: \"Código de produto inválido, limite excedido\".\n",
+        "Um site de rede social está verificando os nomes de usuários criados para garantir que estejam dentro de um limite de caracteres permitido.\n\nSe o nome de usuário tiver menos de 3 caracteres, exibir: \"Nome de usuário inválido, muito curto\".\nSe o nome de usuário tiver entre 3 e 15 caracteres, exibir: \"Nome de usuário válido\".\nSe o nome de usuário tiver mais de 15 caracteres, exibir: \"Nome de usuário inválido, muito longo\".\n"
+      ],
+      "nota-aluno": [
+        "",
+        "Uma escola utiliza um sistema que classifica os alunos com base nas notas das provas finais. A classificação determina se o aluno passou, ficou em recuperação ou foi reprovado.\n\nSe a nota for maior ou igual a 7, exibir: \"Aprovado\".\nSe a nota estiver entre 5 e 6.9, exibir: \"Recuperação\".\nSe a nota for menor que 5, exibir: \"Reprovado\".\n",
+        "Uma universidade implementa um sistema de bonificação onde os alunos com as melhores notas recebem bolsas de estudo.\n\nSe a nota for maior ou igual a 9, exibir: \"Bolsa integral concedida\".\nSe a nota estiver entre 8 e 8.9, exibir: \"Bolsa parcial concedida\".\nSe a nota for menor que 8, exibir: \"Sem bolsa de estudo\".\n",
+        "Uma competição de matemática atribui prêmios para os alunos com base em suas notas, determinando o nível de premiação de acordo com a pontuação.\n\nSe a nota for maior ou igual a 95, exibir: \"Medalha de ouro\".\nSe a nota estiver entre 85 e 94, exibir: \"Medalha de prata\".\nSe a nota estiver entre 70 e 84, exibir: \"Medalha de bronze\".\nSe a nota for menor que 70, exibir: \"Sem medalha\".\n",
+        "Uma escola utiliza uma escala de letras para classificar o desempenho dos alunos em avaliações. O sistema precisa converter a nota numérica em uma letra correspondente.\n\nSe a nota for maior ou igual a 90, exibir: \"A\".\nSe a nota estiver entre 80 e 89, exibir: \"B\".\nSe a nota estiver entre 70 e 79, exibir: \"C\".\nSe a nota estiver entre 60 e 69, exibir: \"D\".\nSe a nota for menor que 60, exibir: \"F\".\n",
+        "Uma universidade classifica os alunos com base em notas numéricas, mas a avaliação final deve ser feita com uma letra que representa o desempenho do aluno.\n\nSe a média do aluno for maior ou igual a 9, exibir: \"Nota A\".\nSe a média estiver entre 7 e 8.9, exibir: \"Nota B\".\nSe a média estiver entre 5 e 6.9, exibir: \"Nota C\".\nSe a média estiver entre 3 e 4.9, exibir: \"Nota D\".\nSe a média for menor que 3, exibir: \"Nota E\".\n",
+        "Uma escola classifica os alunos em diferentes faixas de desempenho, com base na média final das notas.\n\nSe a média for maior ou igual a 9, exibir: \"Desempenho excelente\".\nSe a média estiver entre 7 e 8.9, exibir: \"Desempenho bom\".\nSe a média estiver entre 5 e 6.9, exibir: \"Desempenho regular\".\nSe a média for menor que 5, exibir: \"Desempenho insatisfatório\".\n",
+        "Uma escola usa um sistema misto de classificação em que as notas finais são convertidas para letras e recebem uma pontuação adicional.\n\nSe a nota final for \"A\", exibir: \"Pontuação 10\".\nSe a nota for \"B\", exibir: \"Pontuação 8\".\nSe a nota for \"C\", exibir: \"Pontuação 6\".\nSe a nota for \"D\", exibir: \"Pontuação 4\".\nSe a nota for \"E\", exibir: \"Pontuação 2\".\n"
+      ]
+    }
+  }
+}

@@ -2,7 +2,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+    <style>
+        /* Remove o sublinhado dos links */
+        a {
+            text-decoration: none;
+        }
+        /* Adiciona sublinhado somente ao passar o mouse */
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 <div class=" my-2">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
@@ -27,80 +36,33 @@
 
 
 
-<h4 class="py-3">
-  Topics.
-  <small class="text-body-secondary">Select one of the categories of problems to begin solving</small>
-</h4>
 
-<div class="card">
-  <div class="card-body">
-    <div class="py-3">
-    <h5 class="card-title">Beginner</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">Basic Problems for anyone who has just started to program...</h6>
-    </div>
-
-    <div class="row ">
-
-      <div class="col">
-
-        <a href="#" class="problem-link">
-          <div class="problem-level">Input/Output</div>
-          <div class="problem-description">Basic problems for anyone who has just started to program...</div>
-          <div class="problem-count">14 PROBLEMS - 58 VARIATIONS </div>
-        </a>
-
-      </div>
-
-      <div class="col">
-
-        <a href="{% url 'topic' 'conditional' %}" class="problem-link">
-          <div class="problem-level">Conditionals</div>
-          <div class="problem-description">Make different decisions based on certain conditions...</div>
-          <div class="problem-count">4 PROBLEMS - 36 VARIATIONS </div>
-        </a>
-
-      </div>
-
-
-
-    </div>
-    <div class="row py-4">
-
-      <div class="col">
-
-        <a href="#" class="problem-link">
-          <div class="problem-level">Foor Loops</div>
-          <div class="problem-description">Foor loops just started to program...</div>
-          <div class="problem-count">4 PROBLEMS - 8 VARIATIONS </div>
-        </a>
-
-      </div>
-
-      <div class="col">
-
-        <a href="#" class="problem-link">
-          <div class="problem-level">Fuctions</div>
-          <div class="problem-description"> fuctions decisions based on certain conditions...</div>
-          <div class="problem-count">4 PROBLEMS - 36 VARIATIONS </div>
-        </a>
-
-      </div>
-
-
-
-    </div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<a href="">Input/Output</a><br>
-<a href="{% url 'topic' 'conditional' %}">Conditionals</a><br>
-<a href="#">For Loops</a><br>
+ <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Condicionais</th>
+                    <th scope="col">Questões</th>
+                    <th scope="col">Dificuldade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="/if-simples">Condicional Simples</a></td>
+                    <td>54</td>
+                    <td>Fácil</td>
+                </tr>
+                <tr>
+                    <td><a href="/topico2">Condicional Composto</a></td>
+                    <td>35</td>
+                    <td>Média</td>
+                </tr>
+                <tr>
+                    <td><a href="/topico3">Condicional Try/Execpt</a></td>
+                    <td>58</td>
+                    <td>Difícil</td>
+                </tr>
+            </tbody>
+        </table>
 
 
 
