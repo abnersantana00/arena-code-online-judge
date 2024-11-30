@@ -11,26 +11,37 @@ def home(request):
 # condicionais
 def topic(request, topic):
 
-    file1 = f'main/static/json-files/templates/{topic}.json'
-    file2 = f'main/static/json-files/questions/{topic}-questoes.json'
-    print(file1)
-    with open(file1, 'r', encoding='utf-8') as file:
-        json_template = json.load(file)
-    with open(file2, 'r', encoding='utf-8') as file:
-        json_questions = json.load(file)
-
-
-
+    json_template = f'main/static/json-files/templates/{topic}.json'
+    json_questions = f'main/static/json-files/questions/{topic}-questoes.json'
+    all_questions = generate_questions(json_template, json_questions)
+    one_question = generate_questions(json_template, json_questions, select_one=True)
     context = {
 
-                    'topic': topic,
-                    }
+        'all_questions': all_questions,
+        'one_question': one_question,
+    }
+    if request.method == 'POST':
+        code_submission = request.POST.get('code_submission')
+        question = request.POST.get('question')
+        print(code_submission)
+        print(question)
+        context = {
+
+            'code_submission': code_submission,
+            'question': question,
+            'all_questions': all_questions,
+            'one_question': one_question,
+        }
+
+        return render(request, 'topic_detail.html', context)
+
+
 
 
 
     return render(request, 'topic.html', context)
 
-
+# descondiderar este topic detail
 def topic_detail(request, topic, topic_name):
 
     file1 = f'main/static/json-files/templates/{topic}.json'
@@ -63,8 +74,10 @@ def topic_detail(request, topic, topic_name):
 
 
 
-def source_code(request, topic, topic_name, problem_id):
+def source_code(request, code_submission, question, problem_id):
     if request.method == 'POST':
+        print(code_submission)
+
         code_submission = request.POST.get('code_submission')
         file2 = f'main/static/json-files/questions/{topic}-questions.json'
         with open(file2, 'r', encoding='utf-8') as file:
@@ -75,7 +88,7 @@ def source_code(request, topic, topic_name, problem_id):
 
         context = {
             'topic': topic,
-            'topic_name': topic_name,
+            #'topic_name': topic_name,
             'problem_id' : problem_id,
             'code_submission': code_submission,
             'result' : result,

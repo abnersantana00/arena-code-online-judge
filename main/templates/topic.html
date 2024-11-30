@@ -43,12 +43,8 @@
         <div class="col-8">
             <div class="card">
                 <div class="card-body">
-                        <b class="fw-bold py-2">{{one_question.title}} </b> <br><br>
-                        <p> QUestao Gerada</p>
-                        <p> {{one_question.stem | safe}} </p>
-                        <br><br>
-
-                        
+                        <h3>Enunciado</h3>
+                    {{one_question}}
                     </div>
                 </div>
             </div>
@@ -61,7 +57,9 @@
                             {% csrf_token %}
                             <div id="editor">{{ code|default:'' }}</div>
                             <textarea name="code_submission" id="code_submission" style="display: none;"></textarea>
+                            <textarea name="question" id="question"  style="display: none;">{{one_question}}</textarea>
                             <button type="submit" class="my-4 btn btn-outline-success">Submit Code</button>
+
                         </form>
                 </div>
            </div>
@@ -72,6 +70,9 @@
 
 <hr>
     <p> Todas as Questões </p>
+    {% for question in all_questions %}
+            {{ question | safe }} <br><br><br>
+    {% endfor %}
 </section>
 <br>
 

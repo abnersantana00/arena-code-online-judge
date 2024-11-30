@@ -30,47 +30,30 @@
 <section>
 
     <div class="row">
-        <div class="col-8">
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                        <b class="fw-bold py-2">{{one_question.title}} </b> <br><br>
-
-                        <p> {{one_question.stem | safe}} </p>
-                        <br><br>
-
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Input Sample</th>
-                                    <th scope="col">Output Sample</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for expected_input, expected_output in expected %}
-                                <tr>
-                                    <td>{{ expected_input }}</td>
-                                    <td>{{ expected_output }}</td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
+                    <h3> Enunciado </h3>
+                    {{one_question}}
+                </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h3> Seu codigo </h3>
+                    {{code_submission}}
                 </div>
             </div>
 
-        <div class="col">
-           <div class="card">
+             <hr>
+            <div class="card">
                 <div class="card-body">
-                        <h3> Escreva seu código aqui </h3>
-                        <form method="post" action="{% url 'source_code' topic=topic topic_name=topic_name problem_id=problem_id  %}">
-                            {% csrf_token %}
-                            <div id="editor">{{ code|default:'' }}</div>
-                            <textarea name="code_submission" id="code_submission" style="display: none;"></textarea>
-                            <button type="submit" class="my-4 btn btn-outline-success">Submit Code</button>
-                        </form>
+                    <h3> Resposta - (IA Generativa) </h3>
+                    <p>RESPOSTA GERADA POR IA</p>
                 </div>
-           </div>
-        </div>
+            </div>
+
+
 
     </div>
 
