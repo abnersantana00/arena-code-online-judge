@@ -25,8 +25,9 @@ def topic(request, topic):
         question = request.POST.get('question')
         print(code_submission)
         print(question)
-        context = {
 
+
+        context = {
             'code_submission': code_submission,
             'question': question,
             'all_questions': all_questions,
@@ -44,28 +45,11 @@ def topic(request, topic):
 # descondiderar este topic detail
 def topic_detail(request, topic, topic_name):
 
-    file1 = f'main/static/json-files/templates/{topic}.json'
-    file2 = f'main/static/json-files/questions/{topic}-questions.json'
 
-    with open(file1, 'r', encoding='utf-8') as file:
-        json_template = json.load(file)
-    with open(file2, 'r', encoding='utf-8') as file:
-        json_questions = json.load(file)
-
-    all_questions = generate_all_questions(json_template,json_questions )
-    one_question = generate_one_question(json_template, json_questions)
-    problem_id = one_question['problem_id']
-
-    combined_list = list(zip(one_question['input_expected'], one_question['output_expected']))
-    expected = combined_list if len(combined_list) < 3 else random.sample(combined_list, 3)
 
     context = {
         'topic': topic,
         'topic_name': topic_name,
-        'all_questions': all_questions,
-        'one_question' : one_question,
-        'problem_id' : problem_id,
-        'expected' : expected
     }
 
 
@@ -74,7 +58,7 @@ def topic_detail(request, topic, topic_name):
 
 
 
-def source_code(request, code_submission, question, problem_id):
+def source_code(request, code_submission, problem_id):
     if request.method == 'POST':
         print(code_submission)
 
