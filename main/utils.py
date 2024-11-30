@@ -79,38 +79,37 @@ def generate_questions(template_path, question_path, qtd_itens=None, select_one=
         raise ValueError("Erro: O template e a lista de geração têm códigos diferentes")
 
 
-def get_feedback(question, code_submission):
-    """
-    Gera um feedback detalhado para uma questão e o código submetido.
+def get_feedback(question, code_submission, api_key):
+    from openai import OpenAI
 
-    Args:
-        question (str): O enunciado da questão.
-        code_submission (str): O código submetido como resposta.
+    # Criando o cliente diretamente com a chave API
+    client = OpenAI(api_key=api_key)
 
-    Returns:
-        str: Feedback detalhado gerado pela IA.
-    """
-    # Estruturando o prompt
-    prompt = f"""
-    Questão: {question}
+    # Mensagens para o modelo
+    message = [
+        {"role": "system", "content": "Você é um assistente especializado em revisar código e dar feedback."}
+    ]
 
-    Código submetido: 
-    {code_submission}
+    # Adicionando a questão e a submissão ao contexto
+    feedback_prompt = (
+        f"Questão: {question}\n"
+        f"Código submetido:\n{code_submission}\n\n"
+        f"Baseado na questão e no código submetido, corrija a resposta e dê um feedback detalhado."
+    )
 
-    Por favor, forneça um feedback detalhado sobre o código submetido. 
-    Analise sua correção, aderência aos requisitos da questão e eficiência. 
-    Dê sugestões de melhorias, se necessário.
-    """
+    # Adicionando o prompt como mensagem do usuário
+    message.append({"role": "user", "content": feedback_prompt})
 
     try:
-        # Chamada à API do OpenAI
-        response = openai.Completion.create(
-            engine="text-davinci-003",  # Modelo da OpenAI
-            prompt=prompt,
-            max_tokens=500,
-            temperature=0.7
+        # Chamada à API
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            temperature=1,
+            max_tokens=1000,
+            messages=message,
         )
-        feedback = response.choices[0].text.strip()
-        return feedback
+        # Retornando o conteúdo da resposta
+        return response.choices[0].message.content
     except Exception as e:
-        return f"Erro ao gerar feedback: {e}"
+        # Tratamento de erro
+        return f"Erro ao obter o feedback: {e}"

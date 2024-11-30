@@ -1,7 +1,9 @@
+import openai
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_protect
 from .utils import *
 import json, random
+from decouple import config
 def home(request):
     return render(request, 'home.html')
 
@@ -23,15 +25,17 @@ def topic(request, topic):
     if request.method == 'POST':
         code_submission = request.POST.get('code_submission')
         question = request.POST.get('question')
-        print(code_submission)
-        print(question)
 
 
+
+        feedback = get_feedback(question, code_submission, config('OPENAI_API_KEY'))
+        print(feedback)
         context = {
             'code_submission': code_submission,
             'question': question,
             'all_questions': all_questions,
             'one_question': one_question,
+            'feedback' : feedback
         }
 
         return render(request, 'topic_detail.html', context)
