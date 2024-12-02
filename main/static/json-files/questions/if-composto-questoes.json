@@ -8,8 +8,8 @@
         "contexto": "1"
       },
       "layer-1-var": {
-        "avaliacao-credito": "1",
-        "desconto": "0",
+        "avaliacao-credito": "0",
+        "desconto": "1",
         "frete": "0",
         "imposto": "0",
         "imposto-de-renda": "0",

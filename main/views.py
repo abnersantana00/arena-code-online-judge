@@ -29,7 +29,7 @@ def topic(request, topic):
 
 
         feedback = get_feedback(question, code_submission, config('OPENAI_API_KEY'))
-        print(feedback)
+
         context = {
             'code_submission': code_submission,
             'question': question,
