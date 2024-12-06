@@ -7,9 +7,6 @@ from decouple import config
 def home(request):
     return render(request, 'home.html')
 
-
-
-
 # condicionais
 def topic(request, topic):
 
@@ -41,15 +38,10 @@ def topic(request, topic):
         return render(request, 'topic_detail.html', context)
 
 
-
-
-
     return render(request, 'topic.html', context)
 
 # descondiderar este topic detail
 def topic_detail(request, topic, topic_name):
-
-
 
     context = {
         'topic': topic,

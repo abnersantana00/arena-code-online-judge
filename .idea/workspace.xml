@@ -7,7 +7,8 @@
     <list default="true" id="efbed02c-f6a1-40a1-9a4a-c627ecad5392" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/static/json-files/questions/if-composto-questoes.json" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/json-files/questions/if-composto-questoes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/json-files/templates/if-composto.json" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/json-files/templates/if-composto.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/topic_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/topic_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
     </list>
@@ -42,25 +43,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.main.executor": "Run",
-    "Python.tests (1).executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/abner/OneDrive/Documentos/GitHub/arena-code-online-judge/main/static/json-files/questions",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PyCharm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tests (1).executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/abner/OneDrive/Documentos/GitHub/arena-code-online-judge/main/static/json-files/questions&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PyCharm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\abner\OneDrive\Documentos\GitHub\arena-code-online-judge\main\static\json-files\questions" />
@@ -190,7 +191,8 @@
       <workItem from="1717020080355" duration="19956000" />
       <workItem from="1717161719327" duration="7189000" />
       <workItem from="1732825467751" duration="19170000" />
-      <workItem from="1732972347500" duration="10345000" />
+      <workItem from="1732972347500" duration="14766000" />
+      <workItem from="1733257047789" duration="11481000" />
     </task>
     <servers />
   </component>

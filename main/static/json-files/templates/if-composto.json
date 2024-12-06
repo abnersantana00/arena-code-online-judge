@@ -23,7 +23,7 @@
   },
   "layer-1": {
     "layer-nome": "if-aninhado",
-    "stem": "{{avaliacao-credito}}{{desconto}}{{frete}}{{imposto}}{{imposto-renda}}{{multa}}{{promocao}}{{seguro}}",
+    "stem": "{{avaliacao-credito}}{{desconto}}{{frete}}{{imposto}}{{imposto-de-renda}}{{multa}}{{promocao}}{{seguro}}",
     "layer-1-var": {
       "avaliacao-credito": [
         "",
@@ -31,7 +31,11 @@
       ],
       "desconto": [
         "",
-        "Se o cliente é fidelidade:\nEntão, se comprou mais de 10 itens, o desconto é de 10%.\nSenão, se comprou entre 5 e 10 itens, o desconto é de 5%.\nSenão, o desconto é de 0%.\n\nSe o cliente é regular:\nEntão, se comprou mais de 10 itens, o desconto é de 5%.\nSenão, se comprou entre 5 e 10 itens, o desconto é de 2%.\nSenão, o desconto é de 0%.\n\nSe nenhum dos critérios anteriores for atendido, não há desconto."
+        "Se o cliente é fidelidade:\nEntão, se comprou mais de 10 itens, o desconto é de 10%.\nSenão, se comprou entre 5 e 10 itens, o desconto é de 5%.\nSenão, o desconto é de 0%.\n\nSe o cliente é regular:\nEntão, se comprou mais de 10 itens, o desconto é de 5%.\nSenão, se comprou entre 5 e 10 itens, o desconto é de 2%.\nSenão, o desconto é de 0%.\n\nSe nenhum dos critérios anteriores for atendido, não há desconto.",
+        "Se o cliente possui assinatura premium:\nSe o valor total da compra for maior que R$ 500:\nO desconto é de 15%.\nSenão, se o valor for entre R$ 200 e R$ 500:\nO desconto é de 10%.\nCaso contrário:\nO desconto é de 5%.\n\nSe o cliente possui assinatura básica:\nSe o valor total da compra for maior que R$ 300:\nO desconto é de 10%.\nSenão, se o valor for entre R$ 100 e R$ 300:\nO desconto é de 5%.\nCaso contrário:\nNão há desconto.\n\nPara clientes sem assinatura:\nSe o valor total da compra for superior a R$ 100:\nAplica-se um desconto de 3%.\nCaso contrário:\nNão há desconto.",
+        "Se a compra incluir produtos eletrônicos:\nSe o valor total for superior a R$ 1.000:\nO desconto é de 20%.\nSenão, se for entre R$ 500 e R$ 1.000:\nO desconto é de 10%.\nCaso contrário:\nNão há desconto.\n\nPara produtos de moda:\nSe a compra for superior a R$ 300:\nO desconto é de 15%.\nCaso contrário:\nO desconto é de 5%.\n\nPara outras categorias:\nAplica-se um desconto fixo de 2%.",
+        "Se o cliente pertence ao programa de fidelidade ouro:\nSe realizou mais de 10 compras no último mês:\nRecebe um desconto de 20%.\nSenão, se realizou entre 5 e 10 compras:\nRecebe um desconto de 10%.\nCaso contrário:\nRecebe um desconto de 5%.\n\nSe o cliente pertence ao programa de fidelidade prata:\nSe realizou mais de 10 compras no último mês:\nRecebe um desconto de 15%.\nSenão, se realizou entre 5 e 10 compras:\nRecebe um desconto de 7%.\nCaso contrário:\nRecebe um desconto de 3%.\n\nPara clientes fora do programa de fidelidade:\nNão há desconto aplicado.",
+        "Se o cliente comprou durante a Black Friday:\nSe o valor total da compra for superior a R$ 2.000:\nO desconto é de 30%.\nSenão, se for entre R$ 1.000 e R$ 2.000:\nO desconto é de 20%.\nCaso contrário:\nO desconto é de 10%.\n\nPara outras datas:\nSe o valor da compra for maior que R$ 1.500:\nO desconto é de 15%.\nSenão, se for entre R$ 500 e R$ 1.500:\nO desconto é de 8%.\nCaso contrário:\nNão há desconto."
       ],
       "frete": [
         "",
