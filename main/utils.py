@@ -4,10 +4,10 @@ import openai
 
 
 def generate_questions(template_path, question_path, qtd_itens=None, select_one=False):
-    with open(template_path, 'r') as template_file:
+    with open(template_path, 'r', encoding='utf-8') as template_file:
         template_data = json.load(template_file)
 
-    with open(question_path, 'r') as questoes_file:
+    with open(question_path, 'r', encoding='utf-8') as questoes_file:
         questoes_data = json.load(questoes_file)
 
     # Comparar o cod-template dos dois arquivos
